@@ -1,0 +1,66 @@
+{% extends 'template/base.html.twig' %}
+
+{% block title %}
+    {{ product.name }}
+{% endblock %}
+
+{% block content %}
+    <nav class="tree_product">
+        <a href="{{ path("home") }}" class="tree_item">
+            <p>Accueil</p>
+        </a>
+        <a href="{{ path("allBracelet") }}" class="tree_item">
+            <p class="bracelet"> / {{ product.category.type }}</p>
+        </a>
+        <a href="{{ path("allBracelet") }}" class="tree_item">
+            <p class=" current bracelet"> / {{ product.name }}</p>
+        </a>
+    </nav>
+    <div class="info_product">
+        <img class="img_product" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+        <div class="txt_product">
+            <div class="price_name">
+                <p>{{ product.name }}</p>
+                <p>{{ product.price }} €</p>
+            </div>
+            <div class="stock">
+                {% if product.stock >= 1 %}
+                    <p class="vert">En stock</p>
+                {% else %}
+                    <p class="rouge">Hors Stock</p>
+                {% endif %}
+            </div>
+            <div>
+                <div class="detail">
+                    <p>Bracelet tisser en perles miyuki coller sur un jonc.</p>
+                    <ul>
+                        <li>Taille unique</li>
+                        <li>Largeur: 2cm</li>
+                        <li>Jonc vernis</li>
+                    </ul>
+                    <p>Tous mes bijoux sont fait à la main, chaque piéces est unique.</p>
+                </div>
+            </div>
+
+            <p class="add_cart">Ajouter aux panier</p>
+        </div>
+    </div>
+    <div>
+        <h2 class="more_title">A voir aussi</h2>
+    </div>
+    <div class="product_more">
+        {% for product in moreProduct%}
+            <div class="products_more">
+                <a href="{{ path(product.category.type,{'id' : product.id}) }}">
+                    <img class="img_more" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
+
+{% block newsletter %}
+    {% include '_partiels/_newsletter.html.twig' %}
+{% endblock %}

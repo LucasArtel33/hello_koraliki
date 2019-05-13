@@ -1,0 +1,15 @@
+{% extends 'template/base.html.twig' %}
+
+{% block title %} Message envoyé {% endblock %}
+
+{% block content %}
+    <h1 class="title_reussi">Votre message a bien été envoyé</h1>
+
+    <p class="txt_reussi">Votre demande sera traitée dans un délai maximum d'une semaine</p>
+
+    <div class="btn_reussi">
+        <a href="{{ path('home') }}">
+            <p>Retour à l'accueil</p>
+        </a>
+    </div>
+{% endblock %}

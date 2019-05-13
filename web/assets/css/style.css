@@ -1,0 +1,605 @@
+a {
+  text-decoration: none;
+  color: #086970;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  background-color: #DBACA0;
+}
+
+p {
+  font-family: "Cinzel", serif;
+}
+
+.current {
+  color: #086970;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+}
+
+.link_logo_header {
+  width: 15%;
+}
+
+.brand_name {
+  font-family: "Dancing Script", cursive;
+  font-size: 150%;
+  padding: 2%;
+  color: #063442;
+}
+
+.logo_header {
+  width: 70%;
+}
+
+.menu {
+  display: flex;
+}
+
+.item_header {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  font-size: 120%;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: #F0D2C3;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #DBACA0;
+  border-bottom: 1px solid #063442;
+}
+
+.index_txt {
+  width: 80%;
+  font-size: 125%;
+  margin-left: 5%;
+  position: absolute;
+  bottom: 20%;
+  color: #063442;
+  font-family: "Cinzel", serif;
+}
+
+.button_collection {
+  position: absolute;
+  bottom: 10%;
+  border: 2px solid #063442;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #F0D2C3;
+  color: #086970;
+  font-size: 20px;
+  margin-left: 5%;
+  font-family: "Cinzel", serif;
+}
+
+.background_index {
+  background-color: #8D5858;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  border-bottom: 3px solid #063442;
+}
+
+.highlight {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  margin: 3%;
+  text-align: center;
+  font-size: x-large;
+}
+
+.highlight_product {
+  margin: 5%;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img {
+  width: 100%;
+}
+
+.img_index {
+  width: 25%;
+  height: 25%;
+}
+
+.insta_title {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  text-align: center;
+  font-size: x-large;
+}
+
+.insta_content {
+  width: 90%;
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}
+
+.title_category {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  text-align: center;
+  font-size: x-large;
+}
+
+.txt_category {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #086970;
+  font-family: "Cinzel", serif;
+  margin-bottom: 5%;
+}
+
+.img_category {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+}
+
+.all_product {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product {
+  width: 25%;
+  margin-bottom: 5%;
+}
+
+.tree {
+  display: flex;
+}
+
+.tree_item {
+  color: #063442;
+  font-family: "Cinzel", serif;
+}
+
+.no_idea {
+  color: #086970;
+}
+
+.bracelet {
+  margin-left: 5px;
+}
+
+.info_category {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Cinzel", serif;
+}
+
+.bar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+}
+
+.tri {
+  font-family: "Cinzel", serif;
+  color: #063442;
+}
+
+footer {
+  clear: both;
+}
+
+.title_newsletter {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+  color: #063442;
+  font-family: "Cinzel", serif;
+}
+
+.form_newsletter {
+  display: flex;
+  justify-content: center;
+}
+
+.input_newsletter {
+  border-color: #063442;
+  font-family: "Cinzel", serif;
+}
+
+.button_newsletter {
+  width: 150px;
+  height: 30px;
+  background-color: #063442;
+  color: white;
+  font-size: 15px;
+  border: 1px solid #063442;
+  font-family: "Cinzel", serif;
+}
+
+.info {
+  display: flex;
+  background-color: #8D5858;
+  margin: 5% -9px;
+  padding: 1%;
+  font-family: "Cinzel", serif;
+}
+
+.paiement, .livraison, .handmade {
+  width: 20%;
+  text-align: center;
+  margin: 0 7%;
+  font-family: "Cinzel", serif;
+  color: #063442;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social_img {
+  width: 100%;
+  height: auto;
+}
+
+.facebook, .instagram {
+  width: 2%;
+  margin: 0 2%;
+}
+
+.nav_foot {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  font-family: "Cinzel", serif;
+}
+
+.nav_foot_item {
+  margin: 20px;
+}
+
+.tree_product {
+  display: flex;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.info_product {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+.vert {
+  color: green;
+}
+
+.rouge {
+  color: red;
+}
+
+.stock {
+  margin-bottom: 10%;
+}
+
+.txt_product {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  width: 50%;
+}
+
+.img_product {
+  width: 35%;
+  height: 35%;
+}
+
+.price_name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  border-bottom: 1px solid #086970;
+}
+
+.detail {
+  font-family: "Cinzel", serif;
+  color: #086970;
+  margin-bottom: 20%;
+}
+
+.add_cart {
+  border: 1px solid #086970;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: #F0D2C3;
+  color: #086970;
+  font-family: "Cinzel", serif;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 45%;
+  text-align: center;
+}
+
+.more_title {
+  font-family: "Cinzel", serif;
+  font-size: x-large;
+  color: #063442;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.product_more {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.products_more {
+  width: 25%;
+}
+
+.img_more {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+}
+
+.title_univers {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  margin-top: 8%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.brand {
+  display: flex;
+  margin: 5vw;
+  justify-content: space-between;
+}
+
+.img_brand {
+  width: 30vw;
+  height: 100%;
+  border: 1px solid #063442;
+}
+
+.brand_txt {
+  width: 50vw;
+  font-size: 1.3em;
+  color: #086970;
+}
+
+.title_conception {
+  text-align: center;
+  font-size: 2em;
+  font-family: "Cinzel", serif;
+  color: #063442;
+}
+
+.conception_block_img {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 10%;
+}
+
+.img_conception {
+  width: 90%;
+  border: 1px solid #063442;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.conception_block_txt {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_conception {
+  margin: 0 5%;
+  font-size: 20px;
+  color: #086970;
+}
+
+.perso_title {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  margin-top: 8%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.perso_txt {
+  margin-top: 2%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #086970;
+  font-size: 1.2em;
+}
+
+.form_perso {
+  margin-top: 3%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  margin-bottom: 1%;
+}
+
+.perso_button {
+  border: 1px solid #086970;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: #F0D2C3;
+  color: #086970;
+  font-family: "Cinzel", serif;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  width: 45%;
+}
+
+.firstname {
+  border: 1px solid #063442;
+  font-family: "Cinzel", serif;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.lastname {
+  border: 1px solid #063442;
+  font-family: "Cinzel", serif;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.email {
+  border: 1px solid #063442;
+  width: 100%;
+  font-family: "Cinzel", serif;
+  font-size: 1.2em;
+  margin-bottom: 1%;
+}
+
+.message {
+  border: 1px solid #063442;
+  width: 100%;
+  height: 40vh;
+  font-family: "Cinzel", serif;
+  font-size: 1.2em;
+  margin-bottom: 1%;
+}
+
+.button_perso {
+  border: 1px solid #086970;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: #F0D2C3;
+  color: #086970;
+  font-family: "Cinzel", serif;
+  font-size: 1em;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+  text-align: center;
+}
+
+.title_reussi {
+  margin-top: 15%;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Cinzel", serif;
+  color: #063442;
+}
+
+.txt_reussi {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: #086970;
+  font-size: 1.5em;
+  margin-top: 7%;
+}
+
+.btn_reussi {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 7%;
+  margin-bottom: 5%;
+  font-size: 1.2em;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,77 @@
+{% extends 'template/base.html.twig' %}
+
+{% block title %}
+    {% for product in products | slice(0,1) %}
+        {% include '_partiels/_category.html.twig' %}
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="title_category">Les
+        {% for product in products | slice(0,1) %}
+            {% include '_partiels/_category.html.twig' %}
+        {% endfor %}</h1>
+    <div class="bar">
+        <nav class="tree">
+            <a href="{{ path("home") }}" class="tree_item">
+                <p>Accueil </p>
+            </a>
+            <a href="{{ path("allBracelet") }}" class="tree_item">
+                <p class="current bracelet"> /
+                    {% for product in products | slice(0,1) %}
+                        {% include '_partiels/_category.html.twig' %}
+                    {% endfor %}</p>
+            </a>
+        </nav>
+{#        <p class="no_idea">Voici les {{ nombre }} résultats</p>#}
+        <div class="dropdown">
+            <p class="dropbtn tri ">Trier par</p>
+            <div class="dropdown-content">
+                <a href="{{ path("allBracelet") }}">Nouveauté</a>
+                <a href="{{ path("bracelet_asc") }}">Prix croissant</a>
+                <a href="{{ path("bracelet_desc") }}">Prix décroissant</a>
+            </div>
+        </div>
+    </div>
+    <div class="all_product">
+    {% for product in products %}
+        <div class="product">
+            <a href="{{ path(product.category.type,{'id' : product.id}) }}">
+                <img class="img_category" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+                <div class="info_category">
+                    <p>{{ product.name }}</p>
+                    <p>{{ product.price }} €</p>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="bar">
+        <nav class="tree">
+            <a href="{{ path("home") }}" class="tree_item">
+                <p>Accueil </p>
+            </a>
+            <a href="{{ path("allBracelet") }}" class="tree_item">
+                <p class="current bracelet"> /
+                    {% for product in products | slice(1,1) %}
+                        {% include '_partiels/_category.html.twig' %}
+                    {% endfor %}</p>
+            </a>
+        </nav>
+        {#        <p class="no_idea">Voici les {{ nombre }} résultats</p>#}
+        <div class="dropdown">
+            <a href="">
+                <p class="dropbtn tri ">Trier par</p>
+            </a>
+            <div class="dropdown-content">
+                <a href="{{ path("allBracelet") }}">Nouveauté</a>
+                <a href="{{ path("bracelet_asc") }}">Prix croissant</a>
+                <a href="{{ path("bracelet_desc") }}">Prix décroissant</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block newsletter %}
+    {% include '_partiels/_newsletter.html.twig' %}
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'template/base.html.twig' %}
+
+{% block title %}
+    Personnalisation
+{% endblock %}
+
+{% block meta %}
+
+{% endblock %}
+
+{% block content %}
+    <h1 class="perso_title">Une envie ? Un projet ? C'est vous qui choisissez.</h1>
+    <p class="perso_txt">
+        C’est ici que vous pouvez me faire part de vos projets, de vos envies. Si vous avez une idée en tête,
+        que vous souhaitez me la partager afin que j’en fasse un bijou unique et à votre goût, je vous invite à
+        m’en faire part ici, en me communiquant votre nom, votre prénom et votre adresse mail.
+    </p>
+
+    {{ form_start(form) }}
+        <div class="form_perso">
+            <form action="post">
+                <div class="row">
+                    <div class="col">
+                        {{ form_widget(form.firstname) }}
+                        {{ form_errors(form.firstname) }}
+                    </div>
+                    <div class="col">
+                        {{ form_widget(form.lastname) }}
+                        {{ form_errors(form.lastname) }}
+                    </div>
+                </div>
+                <div>
+                    {{ form_widget(form.email) }}
+                    {{ form_errors(form.email) }}
+                </div>
+                <div>
+                    {{ form_widget(form.message) }}
+                    {{ form_errors(form.message) }}
+                </div>
+                <div style="display:none">
+                    {{ form_rest(form) }}
+                </div>
+                <input class="button_perso" type="submit" value="Envoyer">
+            </form>
+        </div>
+    {{ form_end(form) }}
+
+{% endblock %}

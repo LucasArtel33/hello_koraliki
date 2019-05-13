@@ -1,0 +1,33 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-family: $font;
+  color: $bleu_fonce;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color:#ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: $rose_clair;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: $rose_medium;
+  border-bottom: 1px solid $bleu_fonce;
+}

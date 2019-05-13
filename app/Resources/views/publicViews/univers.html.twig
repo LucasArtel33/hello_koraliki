@@ -1,0 +1,67 @@
+{% extends 'template/base.html.twig' %}
+
+{% block title %}
+   Mon univers
+{% endblock %}
+
+{% block content %}
+    <h1 class="title_univers">Hello Koraliki</h1>
+    <article class="brand">
+        <div>
+            <p class="brand_txt">Hello Koraliki a vu le jour à l’été 2015, sous le nom « La Perle d’Elodie ». Ayant retrouvé un vieux
+                métier à tisser que j’avais eu petite (de la marque Disney Princess, on ne se moque pas !), j’ai décidé,
+                avec mes vieilles perles et en « empruntant » du fil et une aiguille à ma maman, d’apprendre à tisser
+                un bracelet en perles.
+            </p> <br>
+            <p class="brand_txt">
+                Trouvant le résultat joli, j’en étais devenue accro. C’en est devenu un loisir, une passion, qui m’a
+                donné, jusqu’à aujourd’hui, l’envie de me surpasser et de créer des bijoux originaux.
+            </p> <br>
+            <p class="brand_txt">
+                Devenue « Hello Koraliki » en 2017, ce nom plus sérieux reflète ma personnalité, et bien entendu
+                mes origines ; « Koraliki » signifiant « Perles » en polonais.
+            </p>
+        </div>
+        <img class="img_brand" src="{{ asset('assets/img/travaux.jpg') }}" alt="image a venir">
+    </article>
+
+    <h2 class="title_conception">La Conception</h2>
+
+    <div class="conception_block_img">
+        <div>
+            <img class="img_conception" src="{{ asset('assets/img/travaux.jpg') }}" alt="produit">
+        </div>
+        <div>
+            <img class="img_conception" src="{{ asset('assets/img/travaux.jpg') }}" alt="produit">
+        </div>
+        <div>
+            <img class="img_conception" src="{{ asset('assets/img/travaux.jpg') }}" alt="produit">
+        </div>
+    </div>
+
+    <article class="conception_block_txt">
+        <p class="text_conception">
+            Comme dit plus haut, j’ai commencé en ne faisant que des bracelets avec un vieux métier à tisser et
+            de vieilles perles de rocaille. Au fur et à mesure que j’utilisais cet outil, j’imaginais d’autres bijoux ;
+            des colliers, des boucles d’oreilles… bijoux qui sont plus compliqués à réaliser de cette manière.
+        </p> <br>
+        <p class="text_conception">
+            J’ai donc appris petit à petit les tissages en peyote et brick stitch. Cela m’a permis d’avoir un champ
+            de créations plus vaste. Puis, j’ai découvert les perles miyuki delica 11/0… Et encore une fois, j’en suis
+            devenue accro ! Des perles qui ont toutes la même taille (pas comme les rocailles), permettant
+            d’avoir un bijou de meilleur qualité et un rendu beaucoup plus sympa.
+        </p> <br>
+        <p class="text_conception">
+            Je ne travaille aujourd’hui qu’avec des perles miyuki delicas 11/0, j’en ai fait ma marque de fabrique,
+            en les associant avec divers objets (joncs, breloques, chaines, grosses perles… etc).
+        </p> <br>
+        <p class="text_conception">
+            Aujourd’hui, mon unique but est de proposer des bijoux qui vont avec tout, originaux, et diversifiés.
+            J’espère en tout cas l’atteindre avec ce nouveau site internet !
+        </p>
+    </article>
+{% endblock %}
+
+{% block newsletter %}
+    {% include '_partiels/_newsletter.html.twig' %}
+{% endblock %}

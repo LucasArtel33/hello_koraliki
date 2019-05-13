@@ -1,0 +1,78 @@
+.index_txt{
+  width: 80%;
+  font-size: 125%;
+  margin-left: 5%;
+  position: absolute;
+  bottom: 20%;
+  color: $bleu_fonce;
+  font-family: $font;
+}
+
+.button_collection {
+  position: absolute;
+  bottom:10%;
+  border: 2px solid $bleu_fonce;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: $rose_clair;
+  color: $bleu_clair;
+  font-size: 20px;
+  margin-left: 5%;
+  font-family: $font;
+}
+
+.background_index{
+  background-color: $rose_fonce;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  border-bottom: 3px solid $bleu_fonce;
+}
+
+.highlight{
+  font-family: $font;
+  color: $bleu_fonce;
+  margin: 3%;
+  text-align: center;
+  font-size: x-large;
+}
+
+.highlight_product {
+  margin: 5%;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img{
+  width: 100%;
+
+}
+
+.img_index{
+  width: 25%;
+  height:25%;
+}
+
+.insta_title{
+  font-family: $font;
+  color: $bleu_fonce;
+  //margin: 1%;
+  text-align: center;
+  font-size: x-large;
+}
+
+.insta_content{
+  width: 90%;
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item{
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+}

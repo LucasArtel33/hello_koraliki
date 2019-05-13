@@ -1,0 +1,18 @@
+a {
+  text-decoration: none;
+  color: $bleu_clair;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $rose_medium;
+}
+
+p{
+  font-family: $font;
+}
+
+.current{
+  color: $bleu_clair;
+}

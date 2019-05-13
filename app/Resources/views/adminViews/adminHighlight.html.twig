@@ -1,0 +1,28 @@
+{% extends 'template/adminBase.html.twig' %}
+
+{% block title %} Produit mis en avant {% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Gerer les highlight</h1>
+
+    {{ form_start(highlightForm) }}
+    <div class="col">
+        {{ form_label(highlightForm.product1, 'Produit 1 :') }}
+        {{ form_errors(highlightForm.product1) }}
+        {{ form_widget(highlightForm.product1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(highlightForm.product2, 'Produit 2 :') }}
+        {{ form_errors(highlightForm.product2) }}
+        {{ form_widget(highlightForm.product2, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(highlightForm.product3, 'Produit 3 :') }}
+        {{ form_errors(highlightForm.product3) }}
+        {{ form_widget(highlightForm.product3, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_widget(highlightForm.submit, {'attr': {'class': 'btn btn-primary' }}) }}
+    </div>
+    {{ form_end(highlightForm) }}
+{% endblock %}

@@ -1,0 +1,33 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+}
+
+.link_logo_header{
+  width: 15%;
+}
+
+.brand_name{
+  font-family: "Dancing Script", cursive;
+  font-size: 150%;
+  padding: 2%;
+  color: $bleu_fonce;
+}
+
+.logo_header{
+  width: 70%;
+}
+
+.menu{
+  display: flex;
+}
+.item_header{
+  font-family: $font;
+  color: $bleu_fonce;
+  font-size: 120%;
+  padding:  10px;
+}

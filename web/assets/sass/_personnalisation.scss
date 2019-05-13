@@ -1,0 +1,130 @@
+.perso_title{
+  font-family: $font;
+  color: $bleu_fonce;
+  margin-top:8%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.perso_txt{
+  margin-top: 2%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color:$bleu_clair;
+  font-size: 1.2em;
+}
+
+.form_perso{
+  margin-top: 3%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row{
+  margin-bottom: 1%;
+}
+
+.perso_button{
+  border: 1px solid $bleu_clair;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: $rose_clair;
+  color: $bleu_clair;
+  font-family: $font;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.col{
+  width: 45%;
+}
+
+.firstname{
+  border:1px solid $bleu_fonce;
+  font-family: $font;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.lastname{
+  border: 1px solid $bleu_fonce;
+  font-family: $font;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.email{
+  border: 1px solid $bleu_fonce;
+  width: 100%;
+  font-family: $font;
+  font-size: 1.2em;
+  margin-bottom: 1%;
+}
+
+.message{
+  border: 1px solid $bleu_fonce;
+  width: 100%;
+  height: 40vh;
+  font-family: $font;
+  font-size: 1.2em;
+  margin-bottom: 1%;
+}
+
+.button_perso{
+  border: 1px solid $bleu_clair;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: $rose_clair;
+  color: $bleu_clair;
+  font-family: $font;
+  font-size: 1em;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+  text-align: center;
+}
+
+.title_reussi{
+  margin-top: 15%;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: $font;
+  color: $bleu_fonce;
+}
+
+.txt_reussi{
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: $bleu_clair;
+  font-size: 1.5em;
+  margin-top:7%;
+}
+
+.btn_reussi{
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 7%;
+  margin-bottom: 5%;
+  font-size: 1.2em;
+}

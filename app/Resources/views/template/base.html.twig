@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script" rel="stylesheet">
+
+
+</head>
+<body>
+    <header class="header" id="header">
+            <a class="link_logo_header" href="{{ path('home') }}">
+                <img class="logo_header" id="logo" src="{{ asset('assets/img/logo.png') }}" alt="le logo">
+                <h1 style="display: none;" class="brand_name" id="text">Hello Koraliki</h1>
+            </a>
+        <nav class="nav_header">
+            <ul class="menu">
+                <div class="dropdown">
+                    <li class="item_header dropbtn ">Ma Collection</li>
+                    <div class="dropdown-content">
+                        <a href="{{ path('allBracelet') }}">Bracelets</a>
+                        <a href="{{ path('allCollier') }}">Colliers</a>
+                        <a href="{{ path('allBoucle') }}">Boucles d'oreilles</a>
+                    </div>
+                </div>
+                <a href="{{ path('univers') }}">
+                    <li class="item_header">Mon Univers</li>
+                </a>
+                <a href="{{ path('personnalisation') }}">
+                    <li class="item_header">Personnalisation</li>
+                </a>
+                <a href="">
+                    <li class="item_header">Compte Client</li>
+                </a>
+                <a href="">
+                    <li class="item_header">Panier</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+
+<footer>
+    {% block newsletter %}
+    {% endblock %}
+    <div class="info">
+        <div class="paiement ">
+            <h3> Paiement sécurisé</h3>
+            <p>Visa, Mastercard, Virement Bancaire, Paypal.</p>
+        </div>
+        <div class="livraison">
+            <h3> Livraison Gratuite</h3>
+            <p>En France Métropolitaine sans minimum d’achat</p>
+        </div>
+        <div class="handmade">
+            <h3> Fait Main</h3>
+            <p>Je fabrique les bijoux avec patience et passion</p>
+        </div>
+    </div>
+    <div class="social">
+        <div class="facebook">
+            <a href="https://www.facebook.com/hello.koraliki/" target="_blank">
+                <img class="social_img" src="{{ asset('assets/img/facebook.png') }}" alt="logo facebook">
+            </a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/hello.koraliki/" target="_blank">
+                <img class="social_img" src="{{ asset('assets/img/instagram.png') }}" alt=" logo instagram">
+            </a>
+        </div>
+    </div>
+    <nav class="nav_foot">
+        <a class="nav_foot_item" href=""><p>Contactez-moi</p></a>
+        <a class="nav_foot_item" href=""><p>C.G.V</p></a>
+        <a class="nav_foot_item" href=""><p>Livraison</p></a>
+    </nav>
+
+</footer>
+
+<script>
+    // Quand l'utilisateur scroll de 50px alors, je change de logo et applique un background a ma navbar
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("logo").style.display = "none";
+            document.getElementById("text").style.display = "block";
+            document.getElementById("header").style.backgroundColor = "rgba(219, 172, 160, 0.8)";
+        } else if (document.body.scrollTop <= 50 || document.documentElement.scrollTop <= 50) {
+            document.getElementById("logo").style.display = "block";
+            document.getElementById("text").style.display = "none";
+            document.getElementById("header").style.backgroundColor = "transparent";
+        }
+    }
+</script>
+</body>
+</html>

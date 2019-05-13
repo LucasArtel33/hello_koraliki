@@ -1,0 +1,76 @@
+footer{
+  clear: both;
+}
+
+.title_newsletter {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+  color: #063442;
+  font-family: 'Cinzel', serif;
+}
+
+.form_newsletter {
+  display: flex;
+  justify-content: center;
+}
+
+.input_newsletter {
+  border-color: #063442;
+  font-family: 'Cinzel', serif;
+}
+
+.button_newsletter {
+  width: 150px;
+  height: 30px;
+  background-color: #063442;
+  color: white;
+  font-size: 15px;
+  border: 1px solid #063442;
+  font-family: 'Cinzel', serif;
+}
+
+.info {
+  display: flex;
+  background-color: #8D5858;
+  margin:5% -9px;
+  padding: 1%;
+  font-family: 'Cinzel', serif;
+}
+
+.paiement, .livraison, .handmade {
+  width: 20%;
+  text-align: center;
+  margin:0 7%;
+  font-family: 'Cinzel', serif;
+  color: #063442;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social_img {
+  width: 100%;
+  height: auto;
+}
+
+
+.facebook, .instagram {
+  width: 2%;
+  margin: 0 2%;
+}
+
+.nav_foot {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  font-family: 'Cinzel', serif;
+}
+
+.nav_foot_item {
+  margin: 20px;
+}

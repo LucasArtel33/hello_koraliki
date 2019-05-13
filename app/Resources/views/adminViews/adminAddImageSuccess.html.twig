@@ -1,0 +1,18 @@
+{% extends 'template/adminBase.html.twig' %}
+
+{% block title %} Produit ajouter{% endblock %}
+
+{% block content %}
+    <h1 class="text-center marg">Les images ont bien été ajouter</h1>
+    {% for image in image %}
+        <p class="text-center marg">Vos images ont été ajoutées avec le numéro : {{ image.id }} </p>
+    {% endfor %}
+    <div class="button_success">
+        <a href="{{ path('addImage') }}">
+            <button class="btn btn-primary">Ajouter d'autres images</button>
+        </a>
+        <a href="{{ path('addProduct') }}">
+            <button class="btn btn-primary">Ajouter un produit</button>
+        </a>
+    </div>
+{% endblock %}
