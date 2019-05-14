@@ -1,0 +1,12 @@
+{% extends 'template/adminBase.html.twig' %}
+
+{% block title %}Stock mis à jour{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Le stock à bien était mis à jour</h1>
+    <div class="btn_successUpdate">
+        <a href="{{ path('adminProductSelect') }}">
+            <button class="btn btn-primary">Retour à la gestion de produit</button>
+        </a>
+    </div>
+{% endblock %}

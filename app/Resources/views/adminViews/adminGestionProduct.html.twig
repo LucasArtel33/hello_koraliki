@@ -37,14 +37,14 @@
                 <div class="info_category">
                     <p class="text-center">{{ product.name }}</p>
                 </div>
-                <div>
+                <div class="gestion_dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Action
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ path('confirmSuppr',{'id' : product.id}) }}">Supprimer le produit</a>
-                        <a class="dropdown-item" href="#">Gerer le stock</a>
-                        <a class="dropdown-item" href="#">Modifier le produit</a>
+                        <a class="dropdown-item" href="{{ path('updateStock',{'id' : product.id}) }}">Gerer le stock</a>
+                        <a class="dropdown-item" href="{{ path('updateProduit',{'id' : product.id}) }}">Modifier le produit</a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,21 @@
+{% extends 'template/adminBase.html.twig' %}
+
+{% block title %} Stock {% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Gestion du stock</h1>
+    <div class="product_suppr">
+        <img class="img_suppr" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+        <h2 class="text-center ">{{ product.name }}</h2>
+    </div>
+    {{ form_start(stockForm) }}
+        <div class="col">
+            {{ form_label(stockForm.stock, 'Stock :') }}
+            {{ form_errors(stockForm.stock) }}
+            {{ form_widget(stockForm.stock, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_widget(stockForm.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+        </div>
+    {{ form_end(stockForm) }}
+{% endblock %}

@@ -3,45 +3,45 @@
 {% block title %} Modifier un produit {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">Ajouter un produit</h1>
+    <h1 class="text-center">Modifier le produit</h1>
     {{ form_start(productForm) }}
-    <div class="col">
-        {{ form_label(productForm.reference, 'Reference :') }}
-        {{ form_errors(productForm.reference) }}
-        {{ form_widget(productForm.reference, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col">
-        {{ form_label(productForm.name, 'Nom :') }}
-        {{ form_errors(productForm.name) }}
-        {{ form_widget(productForm.name, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col">
-        {{ form_label(productForm.stock, 'Stock :') }}
-        {{ form_errors(productForm.stock) }}
-        {{ form_widget(productForm.stock, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col">
-        {{ form_label(productForm.price, 'Prix :') }}
-        {{ form_errors(productForm.price) }}
-        {{ form_widget(productForm.price, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col">
-        {{ form_label(productForm.category, 'Categorie') }}
-        {{ form_errors(productForm.category) }}
-        {{ form_widget(productForm.category, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col">
-        {{ form_label(productForm.img, 'Image :') }}
-        {{ form_errors(productForm.img) }}
-        {{ form_widget(productForm.img, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col">
-        {{ form_label(productForm.description, 'Description :') }}
-        {{ form_errors(productForm.description) }}
-        {{ form_widget(productForm.description, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col">
-        {{ form_widget(productForm.submit) }}
-    </div>
+        <div class="col">
+            {{ form_label(productForm.reference, 'Reference :') }}
+            {{ form_errors(productForm.reference) }}
+            {{ form_widget(productForm.reference, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_label(productForm.name, 'Nom :') }}
+            {{ form_errors(productForm.name) }}
+            {{ form_widget(productForm.name, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_label(productForm.stock, 'Stock :') }}
+            {{ form_errors(productForm.stock) }}
+            {{ form_widget(productForm.stock, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_label(productForm.price, 'Prix :') }}
+            {{ form_errors(productForm.price) }}
+            {{ form_widget(productForm.price, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_label(productForm.category, 'Categorie') }}
+            {{ form_errors(productForm.category) }}
+            {{ form_widget(productForm.category, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_label(productForm.img, 'Image :') }}
+            {{ form_errors(productForm.img) }}
+            {{ form_widget(productForm.img, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_label(productForm.description, 'Description :') }}
+            {{ form_errors(productForm.description) }}
+            {{ form_widget(productForm.description, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col">
+            {{ form_widget(productForm.submit) }}
+        </div>
     {{ form_end(productForm) }}
 {% endblock %}

@@ -77,4 +77,14 @@
   margin: 2% auto;
 }
 
+.gestion_dropdown {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.btn_successUpdate {
+  width: fit-content;
+  margin: 5% auto;
+}
+
 /*# sourceMappingURL=styleBack.css.map */
