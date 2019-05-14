@@ -1,0 +1,19 @@
+{% extends 'template/adminBase.html.twig' %}
+
+{% block title %} Supprimer un produit {% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Voulez-vous vraiment supprimer le produit?</h1>
+    <div class="product_suppr">
+        <img class="img_suppr" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+        <h2 class="text-center ">{{ product.name }}</h2>
+    </div>
+    <div class="btn_suppr">
+        <a href="{{ path('supprProduct', {'id' : product.id}) }}">
+            <button class="btn btn-primary">Oui</button>
+        </a>
+        <a href="{{ path('annuleSuppr') }}">
+            <button class="btn btn-primary">Non</button>
+        </a>
+    </div>
+{% endblock %}

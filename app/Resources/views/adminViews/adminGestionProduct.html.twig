@@ -1,0 +1,53 @@
+{% extends 'template/adminBase.html.twig' %}
+
+{% block title %} Gestion des produits {% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Supprimer un produit</h1>
+    <div class="suppr_nav">
+        {{ form_start(searchForm) }}
+        <div class="formde">
+            <div>
+                {{ form_errors(searchForm.search) }}
+                {{ form_widget(searchForm.search, {'attr': {'class': 'form-control', 'placeholder': 'Rechercher'}}) }}
+            </div>
+            <div>
+                {{ form_widget(searchForm.submit, {'attr': {'class': 'btn btn-primary' }}) }}
+            </div>
+        </div>
+        {{ form_end(searchForm) }}
+        <div>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Trier par :
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ path('adminProductSelect') }}">Tous les produit</a>
+                <a class="dropdown-item" href="{{ path('adminProductSelectCategory', {'category': 1}) }}">Bracelets</a>
+                <a class="dropdown-item" href="{{ path('adminProductSelectCategory', {'category': 2}) }}">Colliers</a>
+                <a class="dropdown-item" href="{{ path('adminProductSelectCategory', {'category': 3}) }}">Boucles d'oreilles</a>
+            </div>
+        </div>
+    </div>
+    <div class="all_product">
+        {% for product in products %}
+            <div class="product">
+                <a href="{{ path(product.category.type,{'id' : product.id}) }}">
+                    <img class="img_category" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+                </a>
+                <div class="info_category">
+                    <p class="text-center">{{ product.name }}</p>
+                </div>
+                <div>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Action
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ path('confirmSuppr',{'id' : product.id}) }}">Supprimer le produit</a>
+                        <a class="dropdown-item" href="#">Gerer le stock</a>
+                        <a class="dropdown-item" href="#">Modifier le produit</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -3,44 +3,45 @@
 {% block title %} Modifier un produit {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">Modifier un produit</h1>
-    <div class="suppr_nav">
-        {{ form_start(searchForm) }}
-        <div class="formde">
-            <div>
-                {{ form_errors(searchForm.search) }}
-                {{ form_widget(searchForm.search, {'attr': {'class': 'form-control', 'placeholder': 'Rechercher'}}) }}
-            </div>
-            <div>
-                {{ form_widget(searchForm.submit, {'attr': {'class': 'btn btn-primary' }}) }}
-            </div>
-        </div>
-        {{ form_end(searchForm) }}
-        <div>
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Trier par :
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ path('updateProductSelect') }}">Tous les produit</a>
-                <a class="dropdown-item" href="{{ path('updateCategory', {'category': 1}) }}">Bracelets</a>
-                <a class="dropdown-item" href="{{ path('updateCategory', {'category': 2}) }}">Colliers</a>
-                <a class="dropdown-item" href="{{ path('updateCategory', {'category': 3}) }}">Boucles d'oreilles</a>
-            </div>
-        </div>
+    <h1 class="text-center">Ajouter un produit</h1>
+    {{ form_start(productForm) }}
+    <div class="col">
+        {{ form_label(productForm.reference, 'Reference :') }}
+        {{ form_errors(productForm.reference) }}
+        {{ form_widget(productForm.reference, {'attr': {'class': 'form-control'}}) }}
     </div>
-    <div class="all_product">
-        {% for product in products %}
-            <div class="product">
-                <a href="{{ path(product.category.type,{'id' : product.id}) }}">
-                    <img class="img_category" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
-                </a>
-                <div class="info_category">
-                    <p class="text-center">{{ product.name }}</p>
-                    <a href="{{ path('updateProduct',{'id' : product.id}) }}">
-                        <p class="text-center">Modifier le produit</p>
-                    </a>
-                </div>
-            </div>
-        {% endfor %}
+    <div class="col">
+        {{ form_label(productForm.name, 'Nom :') }}
+        {{ form_errors(productForm.name) }}
+        {{ form_widget(productForm.name, {'attr': {'class': 'form-control'}}) }}
     </div>
+    <div class="col">
+        {{ form_label(productForm.stock, 'Stock :') }}
+        {{ form_errors(productForm.stock) }}
+        {{ form_widget(productForm.stock, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productForm.price, 'Prix :') }}
+        {{ form_errors(productForm.price) }}
+        {{ form_widget(productForm.price, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productForm.category, 'Categorie') }}
+        {{ form_errors(productForm.category) }}
+        {{ form_widget(productForm.category, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productForm.img, 'Image :') }}
+        {{ form_errors(productForm.img) }}
+        {{ form_widget(productForm.img, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productForm.description, 'Description :') }}
+        {{ form_errors(productForm.description) }}
+        {{ form_widget(productForm.description, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_widget(productForm.submit) }}
+    </div>
+    {{ form_end(productForm) }}
 {% endblock %}

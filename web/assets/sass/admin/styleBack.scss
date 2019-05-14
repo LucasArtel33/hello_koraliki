@@ -62,5 +62,17 @@
 
 .formde{
   display: flex;
+}
 
+.img_suppr{
+  width: 20%;
+  display: block;
+  margin: 2% auto;
+}
+
+.btn_suppr{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2% auto;
 }

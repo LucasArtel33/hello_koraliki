@@ -4,77 +4,27 @@
 namespace AppBundle\Controller\admin;
 
 use AppBundle\Entity\Product;
-use AppBundle\Form\SearchType;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AdminSupprController extends Controller
 {
-    public function searchSuppr($request)
-    {
-        $searchForm = $this->createForm(SearchType::class);
-        $searchFormViews = $searchForm->createView();
-
-        $searchForm->handleRequest($request);
-
-        if($searchForm->isSubmitted() && $searchForm->isValid())
-        {
-            $search = $searchForm->getData();
-
-            $productRepository = $this->getDoctrine()->getRepository(Product::class);
-            $product = $productRepository->findBy(['name' => $search]);
-
-            return $this->render('adminViews/adminSupprProduct.html.twig',
-                [
-                    'searchForm' => $searchFormViews,
-                    'products' => $product,
-                ]
-            );
-        }
-
-        return $searchFormViews;
-    }
-
     /**
-     * @Route("/admin/suppr_product", name="supprProduct")
+     * @Route("/admin/confirm_suppr/{id}", name="confirmSuppr")
      */
-    public function supprProductAction(Request $request)
+    public function confirmSupprAction($id)
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['enabled' => '1']);
+        $product = $productRepository->find($id);
 
-        $searchFormViews = $this->searchSuppr($request);
-
-        return $this->render('adminViews/adminSupprProduct.html.twig',
+        return $this->render('adminViews/adminSupprConfirm.html.twig',
             [
-                'searchForm' => $searchFormViews,
-                'products' => $products,
-            ]
-        );
+                "product" => $product,
+            ]);
     }
 
     /**
-     * @Route("/admin/suppr_product/{category}", name="supprProductCategory")
-     */
-    public function supprProductCategory($category, Request $request)
-    {
-        $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => $category, 'enabled' => '1']);
-
-        $searchFormViews = $this->searchSuppr($request);
-
-        return $this->render('adminViews/adminSupprProduct.html.twig',
-            [
-                'products' => $products,
-                'searchForm' => $searchFormViews,
-
-            ]
-        );
-    }
-
-    /**
-     * @Route("/admin/suppr_product_{id}", name="supprProductId")
+     * @Route("/admin/suppr_product/{id}", name="supprProduct")
      */
     public function supprProductIdAction($id)
     {
@@ -87,6 +37,14 @@ class AdminSupprController extends Controller
         $entityManager->persist($product);
         $entityManager->flush();
 
-        return $this->redirectToRoute('supprProduct');
+        return $this->redirectToRoute('adminProductSelect');
+    }
+
+    /**
+     * @Route("/admin/annule_suppr", name="annuleSuppr")
+     */
+    public function annuleSupprAction()
+    {
+        return $this->redirectToRoute('adminProductSelect');
     }
 }
