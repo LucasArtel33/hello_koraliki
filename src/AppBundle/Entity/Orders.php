@@ -32,19 +32,47 @@ class Orders
     private $products;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Users", mappedBy="order")
-     */
-    private $users;
-
-    /**
-     * @var date
+     * @var \DateTime
      *
-     * @ORM\Column(name="date", type="date")
+     * @ORM\Column(name="date", type="datetime")
      */
     private $dateCommande;
 
+    public function __construct()
+    {
+        $this->dateCommande = new \DateTime();
+    }
+
+
+
     /**
-     * @return date
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set dateCommande
+     *
+     * @param \DateTime $dateCommande
+     *
+     * @return Orders
+     */
+    public function setDateCommande($dateCommande)
+    {
+        $this->dateCommande = $dateCommande;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCommande
+     *
+     * @return \DateTime
      */
     public function getDateCommande()
     {
@@ -52,47 +80,23 @@ class Orders
     }
 
     /**
-     * @param date $dateCommande
+     * Set statusOrder
+     *
+     * @param \AppBundle\Entity\Status_orders $statusOrder
+     *
+     * @return Orders
      */
-    public function setDateCommande($dateCommande)
+    public function setStatusOrder(\AppBundle\Entity\Status_orders $statusOrder = null)
     {
-        $this->dateCommande = $dateCommande;
+        $this->statusOrder = $statusOrder;
+
+        return $this;
     }
 
     /**
-     * @return mixed
-     */
-    public function getUsers()
-    {
-        return $this->users;
-    }
-
-    /**
-     * @param mixed $users
-     */
-    public function setUsers($users)
-    {
-        $this->users = $users;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProducts()
-    {
-        return $this->products;
-    }
-
-    /**
-     * @param mixed $products
-     */
-    public function setProducts($products)
-    {
-        $this->products = $products;
-    }
-
-    /**
-     * @return mixed
+     * Get statusOrder
+     *
+     * @return \AppBundle\Entity\Status_orders
      */
     public function getStatusOrder()
     {
@@ -100,20 +104,36 @@ class Orders
     }
 
     /**
-     * @param mixed $statusOrder
+     * Add product
+     *
+     * @param \AppBundle\Entity\Product $product
+     *
+     * @return Orders
      */
-    public function setStatusOrder($statusOrder)
+    public function addProduct(\AppBundle\Entity\Product $product)
     {
-        $this->statusOrder = $statusOrder;
+        $this->products[] = $product;
+
+        return $this;
     }
 
     /**
-     * Get id.
+     * Remove product
      *
-     * @return int
+     * @param \AppBundle\Entity\Product $product
      */
-    public function getId()
+    public function removeProduct(\AppBundle\Entity\Product $product)
     {
-        return $this->id;
+        $this->products->removeElement($product);
+    }
+
+    /**
+     * Get products
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProducts()
+    {
+        return $this->products;
     }
 }

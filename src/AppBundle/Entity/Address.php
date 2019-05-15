@@ -76,10 +76,6 @@ class Address
         $this->type = new ArrayCollection();
     }
 
-    /**
-     * @ORM\OneToOne(targetEntity="Users")
-     */
-    private $user;
 
     /**
      * @return mixed
@@ -95,22 +91,6 @@ class Address
     public function setType($type)
     {
         $this->type = $type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-
-    /**
-     * @param mixed $user
-     */
-    public function setUser($user)
-    {
-        $this->user = $user;
     }
 
     /**

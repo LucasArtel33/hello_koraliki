@@ -42,7 +42,9 @@
                 </div>
             </div>
 
-            <p class="add_cart">Ajouter aux panier</p>
+            <a href="{{ path('addCart',{'idProduct' : product.id}) }}">
+                <p class="add_cart">Ajouter aux panier</p>
+            </a>
         </div>
     </div>
     <div>

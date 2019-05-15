@@ -32,7 +32,7 @@ class AdminProductController extends Controller
             $entityManager->persist($product);
             $entityManager->flush();
 
-            return $this->redirectToRoute('addProductSucess');
+            return $this->redirectToRoute('addProductSuccess');
         }
 
         return $this->render('adminViews/adminProduct.html.twig',
@@ -43,7 +43,7 @@ class AdminProductController extends Controller
     }
 
     /**
-     * @Route("/admin/add_product/success", name="addProductSucess")
+     * @Route("/admin/add_product/success", name="addProductSuccess")
      */
     public function addProductSucessaction()
     {

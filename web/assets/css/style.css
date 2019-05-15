@@ -602,4 +602,27 @@ footer {
   font-size: 1.2em;
 }
 
+.login_title {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  margin-top: 8%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.login_form {
+  width: fit-content;
+  margin: 2% auto;
+}
+
+.login_label {
+  font-family: "Cinzel", serif;
+  font-size: 1.2em;
+  color: #086970;
+}
+
+.form_item {
+  margin: 2% 0;
+}
+
 /*# sourceMappingURL=style.css.map */
