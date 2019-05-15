@@ -42,8 +42,12 @@ class Image
      */
     private $img3;
 
+
+
     /**
-     * @return int
+     * Get id
+     *
+     * @return integer
      */
     public function getId()
     {
@@ -51,14 +55,22 @@ class Image
     }
 
     /**
-     * @param int $id
+     * Set img1
+     *
+     * @param string $img1
+     *
+     * @return Image
      */
-    public function setId($id)
+    public function setImg1($img1)
     {
-        $this->id = $id;
+        $this->img1 = $img1;
+
+        return $this;
     }
 
     /**
+     * Get img1
+     *
      * @return string
      */
     public function getImg1()
@@ -67,14 +79,22 @@ class Image
     }
 
     /**
-     * @param string $img1
+     * Set img2
+     *
+     * @param string $img2
+     *
+     * @return Image
      */
-    public function setImg1($img1)
+    public function setImg2($img2)
     {
-        $this->img1 = $img1;
+        $this->img2 = $img2;
+
+        return $this;
     }
 
     /**
+     * Get img2
+     *
      * @return string
      */
     public function getImg2()
@@ -83,29 +103,26 @@ class Image
     }
 
     /**
-     * @param string $img2
+     * Set img3
+     *
+     * @param string $img3
+     *
+     * @return Image
      */
-    public function setImg2($img2)
+    public function setImg3($img3)
     {
-        $this->img2 = $img2;
+        $this->img3 = $img3;
+
+        return $this;
     }
 
     /**
+     * Get img3
+     *
      * @return string
      */
     public function getImg3()
     {
         return $this->img3;
     }
-
-    /**
-     * @param string $img3
-     */
-    public function setImg3($img3)
-    {
-        $this->img3 = $img3;
-    }
-
-
-
 }

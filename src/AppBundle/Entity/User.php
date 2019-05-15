@@ -43,55 +43,29 @@ class User extends BaseUser
      */
     private $createdAt;
 
-    /**
-     * @return mixed
-     */
-    public function getCivility()
+    public function __construct()
     {
-        return $this->civility;
+        parent::__construct();
+        $this->createdAt = new \DateTime();
     }
 
     /**
-     * @param mixed $civility
+     * Set lastName
+     *
+     * @param string $lastName
+     *
+     * @return User
      */
-    public function setCivility($civility)
+    public function setLastName($lastName)
     {
-        $this->civility = $civility;
+        $this->lastName = $lastName;
+
+        return $this;
     }
 
     /**
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * @param \DateTime $createdAt
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @param string $firstName
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-    }
-
-    /**
+     * Get lastName
+     *
      * @return string
      */
     public function getLastName()
@@ -100,17 +74,74 @@ class User extends BaseUser
     }
 
     /**
-     * @param string $lastName
+     * Set firstName
+     *
+     * @param string $firstName
+     *
+     * @return User
      */
-    public function setLastName($lastName)
+    public function setFirstName($firstName)
     {
-        $this->lastName = $lastName;
+        $this->firstName = $firstName;
+
+        return $this;
     }
 
-    public function __construct()
+    /**
+     * Get firstName
+     *
+     * @return string
+     */
+    public function getFirstName()
     {
-        parent::__construct();
-        $this->createdAt = new \DateTime();
-        // your own logic
+        return $this->firstName;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return User
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set civility
+     *
+     * @param \AppBundle\Entity\Civility $civility
+     *
+     * @return User
+     */
+    public function setCivility(\AppBundle\Entity\Civility $civility = null)
+    {
+        $this->civility = $civility;
+
+        return $this;
+    }
+
+    /**
+     * Get civility
+     *
+     * @return \AppBundle\Entity\Civility
+     */
+    public function getCivility()
+    {
+        return $this->civility;
     }
 }

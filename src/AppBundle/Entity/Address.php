@@ -57,48 +57,32 @@ class Address
     private $country;
 
     /**
-     * Get id.
-     *
-     * @return int
+     * @ORM\ManyToMany(targetEntity="AddressType", inversedBy="address")
      */
+    private $type;
 
+    public function __construct()
+    {
+        $this->type = new ArrayCollection();
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
     public function getId()
     {
         return $this->id;
     }
 
     /**
-     * @ORM\ManyToMany(targetEntity="AddressType", inversedBy="address")
-     */
-    private $type;
-
-    public function __construct() {
-        $this->type = new ArrayCollection();
-    }
-
-
-    /**
-     * @return mixed
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * Set address1.
+     * Set address1
      *
      * @param string $address1
      *
-     * @return address
+     * @return Address
      */
     public function setAddress1($address1)
     {
@@ -108,7 +92,7 @@ class Address
     }
 
     /**
-     * Get address1.
+     * Get address1
      *
      * @return string
      */
@@ -118,13 +102,13 @@ class Address
     }
 
     /**
-     * Set address2.
+     * Set address2
      *
-     * @param string|null $address2
+     * @param string $address2
      *
-     * @return address
+     * @return Address
      */
-    public function setAddress2($address2 = null)
+    public function setAddress2($address2)
     {
         $this->address2 = $address2;
 
@@ -132,9 +116,9 @@ class Address
     }
 
     /**
-     * Get address2.
+     * Get address2
      *
-     * @return string|null
+     * @return string
      */
     public function getAddress2()
     {
@@ -142,11 +126,11 @@ class Address
     }
 
     /**
-     * Set zipcode.
+     * Set zipcode
      *
-     * @param int $zipcode
+     * @param integer $zipcode
      *
-     * @return address
+     * @return Address
      */
     public function setZipcode($zipcode)
     {
@@ -156,9 +140,9 @@ class Address
     }
 
     /**
-     * Get zipcode.
+     * Get zipcode
      *
-     * @return int
+     * @return integer
      */
     public function getZipcode()
     {
@@ -166,11 +150,11 @@ class Address
     }
 
     /**
-     * Set city.
+     * Set city
      *
      * @param string $city
      *
-     * @return address
+     * @return Address
      */
     public function setCity($city)
     {
@@ -180,7 +164,7 @@ class Address
     }
 
     /**
-     * Get city.
+     * Get city
      *
      * @return string
      */
@@ -190,11 +174,11 @@ class Address
     }
 
     /**
-     * Set country.
+     * Set country
      *
      * @param string $country
      *
-     * @return address
+     * @return Address
      */
     public function setCountry($country)
     {
@@ -204,12 +188,46 @@ class Address
     }
 
     /**
-     * Get country.
+     * Get country
      *
      * @return string
      */
     public function getCountry()
     {
         return $this->country;
+    }
+
+    /**
+     * Add type
+     *
+     * @param \AppBundle\Entity\AddressType $type
+     *
+     * @return Address
+     */
+    public function addType(\AppBundle\Entity\AddressType $type)
+    {
+        $this->type[] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Remove type
+     *
+     * @param \AppBundle\Entity\AddressType $type
+     */
+    public function removeType(\AppBundle\Entity\AddressType $type)
+    {
+        $this->type->removeElement($type);
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

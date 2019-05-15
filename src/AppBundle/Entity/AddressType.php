@@ -34,25 +34,17 @@ class AddressType
     private $address;
 
     /**
-     * @return mixed
+     * Constructor
      */
-    public function getAddress()
+    public function __construct()
     {
-        return $this->address;
+        $this->address = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
-     * @param mixed $address
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-    }
-
-    /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -60,7 +52,7 @@ class AddressType
     }
 
     /**
-     * Set type.
+     * Set type
      *
      * @param string $type
      *
@@ -74,12 +66,46 @@ class AddressType
     }
 
     /**
-     * Get type.
+     * Get type
      *
      * @return string
      */
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Add address
+     *
+     * @param \AppBundle\Entity\Address $address
+     *
+     * @return AddressType
+     */
+    public function addAddress(\AppBundle\Entity\Address $address)
+    {
+        $this->address[] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Remove address
+     *
+     * @param \AppBundle\Entity\Address $address
+     */
+    public function removeAddress(\AppBundle\Entity\Address $address)
+    {
+        $this->address->removeElement($address);
+    }
+
+    /**
+     * Get address
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAddress()
+    {
+        return $this->address;
     }
 }
