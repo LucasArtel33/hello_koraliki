@@ -6,11 +6,6 @@
     <h1 class="text-center">Modifier le produit</h1>
     {{ form_start(productForm) }}
         <div class="col">
-            {{ form_label(productForm.reference, 'Reference :') }}
-            {{ form_errors(productForm.reference) }}
-            {{ form_widget(productForm.reference, {'attr': {'class': 'form-control'}}) }}
-        </div>
-        <div class="col">
             {{ form_label(productForm.name, 'Nom :') }}
             {{ form_errors(productForm.name) }}
             {{ form_widget(productForm.name, {'attr': {'class': 'form-control'}}) }}

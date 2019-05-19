@@ -22,13 +22,6 @@ class Product
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="reference", type="string")
-     */
-    private $reference;
-
-    /**
      * @var int
      *
      * @ORM\Column(name="stock", type="smallint")
@@ -81,6 +74,7 @@ class Product
 
     /**
      * @ORM\ManyToMany(targetEntity="Orders", inversedBy="products")
+     * @ORM\JoinTable(name="relOrderProduct")
      */
     private $order;
 
@@ -103,30 +97,6 @@ class Product
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set reference
-     *
-     * @param string $reference
-     *
-     * @return Product
-     */
-    public function setReference($reference)
-    {
-        $this->reference = $reference;
-
-        return $this;
-    }
-
-    /**
-     * Get reference
-     *
-     * @return string
-     */
-    public function getReference()
-    {
-        return $this->reference;
     }
 
     /**

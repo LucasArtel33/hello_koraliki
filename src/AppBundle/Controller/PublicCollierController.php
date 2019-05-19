@@ -15,7 +15,7 @@ class PublicCollierController extends Controller
     public function allCollierAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '2']);
+        $products = $productRepository->findBy(['category' => '2', 'enabled' => '1']);
 
         $nombre = count($products);
 
@@ -33,7 +33,7 @@ class PublicCollierController extends Controller
     public function collierAscAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '2'],['price' => 'ASC']);
+        $products = $productRepository->findBy(['category' => '2', 'enabled' => '1'],['price' => 'ASC']);
 
         $nombre = count($products);
 
@@ -51,7 +51,7 @@ class PublicCollierController extends Controller
     public function collierDescAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '2'],['price' => 'DESC']);
+        $products = $productRepository->findBy(['category' => '2', 'enabled' => '1'],['price' => 'DESC']);
 
         $nombre = count($products);
 
@@ -71,7 +71,7 @@ class PublicCollierController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $product = $productRepository->find($id);
 
-        $products = $productRepository->findBy(['category' => '2'] );
+        $products = $productRepository->findBy(['category' => '2', 'enabled' => '1'] );
         $moreProduct = [];
         for($i = 0; $i < 5; $i = count($moreProduct)){
             $rand_keys = array_rand($products, 1);

@@ -2,6 +2,8 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Orders;
+
 /**
  * UsersRepository
  *
@@ -10,4 +12,20 @@ namespace AppBundle\Repository;
  */
 class UsersRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function searchOrderByUser($idUser)
+    {
+        $qb = $this->createQueryBuilder('u');
+
+        $qb->select('o.id')
+            ->join(Orders::class,'o','WITH','orders_id = o.id')
+            ->where('u.id = :id')
+            ->setParameter('id',$idUser);
+
+        $query = $qb->getQuery();
+
+        $result = $query->getResult();
+
+        return $result;
+
+    }
 }

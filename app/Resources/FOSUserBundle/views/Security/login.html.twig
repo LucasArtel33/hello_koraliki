@@ -3,7 +3,9 @@
 
 {% block fos_user_content %}
 
-    <h2 class="login_title">Connexion</h2>
+    <h1 class="login_title">
+        <a class="current" href="{{ path('fos_user_security_login') }}">Connexion</a> / <a href="{{ path('fos_user_registration_register') }}">Inscription</a>
+    </h1>
 
     {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>

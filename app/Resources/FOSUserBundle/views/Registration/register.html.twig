@@ -2,7 +2,10 @@
 {% extends 'template/base.html.twig' %}
 
 {% block fos_user_content %}
-    <h1 class="login_title">Inscription</h1>
+
+    <h1 class="login_title">
+        <a href="{{ path('fos_user_security_login') }}">Connexion</a> / <a class="current" href="{{ path('fos_user_registration_register') }}">Inscription</a>
+    </h1>
 
     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 

@@ -5,7 +5,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UsersRepository")
  * @ORM\Table(name="fos_user")
  */
 class User extends BaseUser
@@ -37,6 +37,11 @@ class User extends BaseUser
     private $civility;
 
     /**
+     * @ORM\OneToMany(targetEntity="Orders", mappedBy="user")
+     */
+    private $order;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetime")
@@ -47,7 +52,11 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->createdAt = new \DateTime();
+        $this->order = new \Doctrine\Common\Collections\ArrayCollection();
     }
+
+
+
 
     /**
      * Set lastName
@@ -143,5 +152,39 @@ class User extends BaseUser
     public function getCivility()
     {
         return $this->civility;
+    }
+
+    /**
+     * Add order
+     *
+     * @param \AppBundle\Entity\Orders $order
+     *
+     * @return User
+     */
+    public function addOrder(\AppBundle\Entity\Orders $order)
+    {
+        $this->order[] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Remove order
+     *
+     * @param \AppBundle\Entity\Orders $order
+     */
+    public function removeOrder(\AppBundle\Entity\Orders $order)
+    {
+        $this->order->removeElement($order);
+    }
+
+    /**
+     * Get order
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getOrder()
+    {
+        return $this->order;
     }
 }

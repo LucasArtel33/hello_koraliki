@@ -1,0 +1,75 @@
+<?php
+
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * RelOrderProduct
+ *
+ * @ORM\Table(name="relOrderProduct")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\RelOrderProductTypeRepository")
+ */
+class RelOrderProduct
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Orders", mappedBy="products")
+     */
+    private $orderId;
+
+    /**n
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="order"
+     */
+    private $productId;
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->orderId = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add orderId
+     *
+     * @param \AppBundle\Entity\Orders $orderId
+     *
+     * @return RelOrderProduct
+     */
+    public function addOrderId(\AppBundle\Entity\Orders $orderId)
+    {
+        $this->orderId[] = $orderId;
+
+        return $this;
+    }
+
+    /**
+     * Remove orderId
+     *
+     * @param \AppBundle\Entity\Orders $orderId
+     */
+    public function removeOrderId(\AppBundle\Entity\Orders $orderId)
+    {
+        $this->orderId->removeElement($orderId);
+    }
+
+    /**
+     * Get orderId
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getOrderId()
+    {
+        return $this->orderId;
+    }
+}

@@ -16,7 +16,7 @@ class PublicBraceletController extends Controller
     public function allBraceletAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '1']);
+        $products = $productRepository->findBy(['category' => '1', 'enabled' => '1']);
 
         $nombre = count($products);
 
@@ -34,7 +34,7 @@ class PublicBraceletController extends Controller
     public function braceletAscAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '1'],['price' => 'ASC']);
+        $products = $productRepository->findBy(['category' => '1', 'enabled' => '1'],['price' => 'ASC']);
 
         $nombre = count($products);
 
@@ -52,7 +52,7 @@ class PublicBraceletController extends Controller
     public function braceletDescAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '1'],['price' => 'DESC']);
+        $products = $productRepository->findBy(['category' => '1', 'enabled' => '1'],['price' => 'DESC' ]);
 
         $nombre = count($products);
 
@@ -72,7 +72,7 @@ class PublicBraceletController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $product = $productRepository->find($id);
 
-        $products = $productRepository->findBy(['category' => '1'] );
+        $products = $productRepository->findBy(['category' => '1', 'enabled' => '1'] );
         $moreProduct = [];
         for($i = 1; $i < 5; $i = count($moreProduct)){
             $rand_keys = array_rand($products, 1);

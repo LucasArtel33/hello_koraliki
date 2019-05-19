@@ -2,6 +2,9 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Orders;
+use AppBundle\Entity\User;
+
 /**
  * OrdersRepository
  *
@@ -10,4 +13,22 @@ namespace AppBundle\Repository;
  */
 class OrdersRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findOrderByUser($idStatus)
+    {
+        $qb = $this->createQueryBuilder('o');
+
+        $qb->select('o.id')
+            ->join(User::class,'u', 'WITH','u.id_order = id')
+            ->where('o.status_order_id = :id')
+            ->setParameter('id',  $idStatus);
+
+        $query = $qb->getQuery();
+
+        $result = $query->getResult();
+
+
+        return $result;
+    }
 }
+
+

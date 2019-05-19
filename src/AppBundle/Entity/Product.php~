@@ -80,7 +80,7 @@ class Product
     private $category;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Orders", inversedBy="products")
+     * @ORM\ManyToOne(targetEntity="Product", inversedBy="productId")
      */
     private $order;
 

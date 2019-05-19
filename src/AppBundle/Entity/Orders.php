@@ -32,6 +32,11 @@ class Orders
     private $products;
 
     /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="order")
+     */
+    private $user;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date", type="datetime")
@@ -41,8 +46,9 @@ class Orders
     public function __construct()
     {
         $this->dateCommande = new \DateTime();
+        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->user = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
 
 
     /**
@@ -135,5 +141,29 @@ class Orders
     public function getProducts()
     {
         return $this->products;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Orders
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

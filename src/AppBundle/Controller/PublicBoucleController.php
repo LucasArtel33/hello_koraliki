@@ -17,7 +17,7 @@ class PublicBoucleController extends Controller
     public function allBoucleAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '3']);
+        $products = $productRepository->findBy(['category' => '3', 'enabled' => '1']);
 
         $nombre = count($products);
 
@@ -35,7 +35,7 @@ class PublicBoucleController extends Controller
     public function boucleAscAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '3'],['price' => 'ASC']);
+        $products = $productRepository->findBy(['category' => '3', 'enabled' => '1'],['price' => 'ASC']);
 
         $nombre = count($products);
 
@@ -53,7 +53,7 @@ class PublicBoucleController extends Controller
     public function boucleDescAction()
     {
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findBy(['category' => '3'],['price' => 'DESC']);
+        $products = $productRepository->findBy(['category' => '3', 'enabled' => '1'],['price' => 'DESC']);
 
         $nombre = count($products);
 
@@ -73,7 +73,7 @@ class PublicBoucleController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $product = $productRepository->find($id);
 
-        $products = $productRepository->findBy(['category' => '3'] );
+        $products = $productRepository->findBy(['category' => '3', 'enabled' => '1'] );
         $moreProduct = [];
         for($i = 0; $i < 5; $i = count($moreProduct)){
             $rand_keys = array_rand($products, 1);
