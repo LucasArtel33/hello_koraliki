@@ -629,4 +629,28 @@ footer {
   font-family: "Cinzel", serif;
 }
 
+.empty {
+  text-align: center;
+  margin-top: 15%;
+  font-family: "Cinzel", serif;
+}
+
+.title_cart {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.img_cart {
+  width: 10%;
+  height: 10%;
+}
+
+.cart_product {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2% auto;
+}
+
 /*# sourceMappingURL=style.css.map */

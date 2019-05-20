@@ -73,6 +73,28 @@ class PublicCartController extends Controller
      */
     public function showPanierAction()
     {
+        $user = $this->getUser();
+        if($user != null)
+        {
+            $userId = $user->getId();
+
+            $orderRepository = $this->getDoctrine()->getRepository(Orders::class);
+            //        $order = $orderRepository->findBy(['statusOrder' => 1, 'user' => $userId]);
+            $order = $orderRepository->findProductByOrder($userId);
+            if(empty($order))
+            {
+                return $this->render('publicViews/emptyCart.html.twig');
+            }
+            $order = $order['0'];
+            $product = $order->getProducts();
+
+            return $this->render('publicViews/publicPanier.html.twig',
+                [
+                    'products' => $product,
+                ]
+            );
+        }
+        return $this->redirectToRoute('home');
 
     }
 }

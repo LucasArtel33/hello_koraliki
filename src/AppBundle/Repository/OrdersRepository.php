@@ -13,14 +13,15 @@ use AppBundle\Entity\User;
  */
 class OrdersRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findOrderByUser($idStatus)
+    public function findProductByOrder($userId)
     {
         $qb = $this->createQueryBuilder('o');
 
-        $qb->select('o.id')
-            ->join(User::class,'u', 'WITH','u.id_order = id')
-            ->where('o.status_order_id = :id')
-            ->setParameter('id',  $idStatus);
+        $qb->leftJoin('o.products','product')
+//            ->where('statusOrder = 1')
+            ->andWhere('o.user = :userId')
+            ->setParameter('userId', $userId)
+            ->addSelect('product');
 
         $query = $qb->getQuery();
 

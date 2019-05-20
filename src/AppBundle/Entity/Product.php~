@@ -22,13 +22,6 @@ class Product
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="reference", type="string")
-     */
-    private $reference;
-
-    /**
      * @var int
      *
      * @ORM\Column(name="stock", type="smallint")
@@ -80,18 +73,20 @@ class Product
     private $category;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Product", inversedBy="productId")
-     */
-    private $order;
-
-    /**
      * @ORM\ManyToOne(targetEntity="Image", fetch="EAGER")
      */
     private $img;
+
+    /**
+     * @ORM\OneToMany(targetEntity="RelOrderProduct", mappedBy="productId")
+     */
+    private $relOrder;
 
     public function __construct()
     {
         $this->createdAt = new \DateTime();
     }
+
+
 
 }

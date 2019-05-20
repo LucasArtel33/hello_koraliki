@@ -5,7 +5,19 @@
 {% endblock %}
 
 {% block content %}
-    {% for product in products %}
-        <p>{product.name}</p>
-    {% endfor %}
+    <h1 class="title_cart">Panier</h1>
+    <div>
+        {% for product in products %}
+            <div class="cart_product">
+                <img class="img_cart" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+                <p>{{  product.name }}</p>
+                {% if product.stock >= 1 %}
+                    <p class="vert">En stock</p>
+                {% else %}
+                    <p class="rouge">Hors Stock</p>
+                {% endif %}
+                <p>{{ product.price }} €</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
