@@ -16,6 +16,16 @@ class PublicController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['highlight' => '1']);
 
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/indexLogin.html.twig',
+                [
+                    'products' => $products,
+                ]
+            );
+        }
         return $this->render('publicViews/index.html.twig',
             [
                 'products' => $products,
@@ -28,7 +38,21 @@ class PublicController extends Controller
      */
     public function universAction()
     {
-        return $this->render('publicViews/univers.html.twig');
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/univers.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                ]
+            );
+        }
+        return $this->render('publicViews/univers.html.twig',
+            [
+                'template' => 'base.html.twig',
+            ]
+        );
     }
 
 

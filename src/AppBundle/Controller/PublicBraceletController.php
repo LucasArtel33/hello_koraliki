@@ -18,12 +18,21 @@ class PublicBraceletController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '1', 'enabled' => '1']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
 
+        if($user != null)
+        {
+            return $this->render('publicViews/bracelet.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
         return $this->render('publicViews/bracelet.html.twig',
             [
+                'template' => 'base.html.twig',
                 'products' => $products,
-                'nombre' => $nombre,
             ]
         );
     }
@@ -36,12 +45,22 @@ class PublicBraceletController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '1', 'enabled' => '1'],['price' => 'ASC']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/bracelet.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/bracelet.html.twig',
             [
                 'products' => $products,
-                'nombre' => $nombre,
+                'template' => 'base.html.twig',
             ]
         );
     }
@@ -54,12 +73,22 @@ class PublicBraceletController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '1', 'enabled' => '1'],['price' => 'DESC' ]);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/bracelet.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/bracelet.html.twig',
             [
+                'template' => 'base.html.twig',
                 'products' => $products,
-                'nombre' => $nombre,
             ]
         );
     }
@@ -82,8 +111,24 @@ class PublicBraceletController extends Controller
             }
         }
 
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/product.html.twig',
+                [
+                    'modal' => 'Login',
+                    'template' => 'baseLog.html.twig',
+                    'product' => $product,
+                    'moreProduct' => $moreProduct,
+                ]
+            );
+        }
+
         return $this->render('publicViews/product.html.twig',
             [
+                'modal' => 'Public',
+                'template' => 'base.html.twig',
                 'product' => $product,
                 'moreProduct' => $moreProduct,
 

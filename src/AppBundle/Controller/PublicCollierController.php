@@ -17,12 +17,22 @@ class PublicCollierController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '2', 'enabled' => '1']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/collier.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/collier.html.twig',
             [
+                'template' => 'base.html.twig',
                 'products' => $products,
-                'nombre' => $nombre,
             ]
         );
     }
@@ -35,12 +45,22 @@ class PublicCollierController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '2', 'enabled' => '1'],['price' => 'ASC']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/collier.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/collier.html.twig',
             [
                 'products' => $products,
-                'nombre' => $nombre,
+                'template' => 'base.html.twig',
             ]
         );
     }
@@ -53,12 +73,22 @@ class PublicCollierController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '2', 'enabled' => '1'],['price' => 'DESC']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/collier.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/collier.html.twig',
             [
+                'template' => 'base.html.twig',
                 'products' => $products,
-                'nombre' => $nombre,
             ]
         );
     }
@@ -81,8 +111,20 @@ class PublicCollierController extends Controller
             }
         }
 
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/product.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
         return $this->render('publicViews/product.html.twig',
             [
+                'template' => 'base.html.twig',
                 'product' => $product,
                 'moreProduct' => $moreProduct,
             ]

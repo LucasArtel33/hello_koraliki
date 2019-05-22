@@ -1,26 +1,18 @@
-{% extends 'template/base.html.twig' %}
+{% extends 'template/'~template %}
 
 {% block title %}
-    {% for product in products | slice(0,1) %}
-        {% include '_partiels/_category.html.twig' %}
-    {% endfor %}
+    Les Bracelets
 {% endblock %}
 
 {% block content %}
-    <h1 class="title_category">Les
-        {% for product in products | slice(0,1) %}
-            {% include '_partiels/_category.html.twig' %}
-        {% endfor %}</h1>
+    <h1 class="title_category">Les Bracelets</h1>
     <div class="bar">
         <nav class="tree">
             <a href="{{ path("home") }}" class="tree_item">
                 <p>Accueil </p>
             </a>
             <a href="{{ path("allBracelet") }}" class="tree_item">
-                <p class="current bracelet"> /
-                    {% for product in products | slice(0,1) %}
-                        {% include '_partiels/_category.html.twig' %}
-                    {% endfor %}</p>
+                <p class="current bracelet"> / Bracelets </p>
             </a>
         </nav>
 {#        <p class="no_idea">Voici les {{ nombre }} résultats</p>#}
@@ -52,10 +44,7 @@
                 <p>Accueil </p>
             </a>
             <a href="{{ path("allBracelet") }}" class="tree_item">
-                <p class="current bracelet"> /
-                    {% for product in products | slice(1,1) %}
-                        {% include '_partiels/_category.html.twig' %}
-                    {% endfor %}</p>
+                <p class="current bracelet"> / Bracelets</p>
             </a>
         </nav>
         {#        <p class="no_idea">Voici les {{ nombre }} résultats</p>#}

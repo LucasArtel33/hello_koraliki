@@ -1,4 +1,4 @@
-{% extends 'template/base.html.twig' %}
+{% extends 'template/'~template %}
 
 {% block title %}
     {{ product.name }}
@@ -17,7 +17,13 @@
         </a>
     </nav>
     <div class="info_product">
-        <img class="img_product" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+
+        <button class="btn_img" onclick="plusDivs(-1)">&#10094;</button>
+        <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+        <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img2) }}" alt="produit">
+        <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img3) }}" alt="produit">
+        <button class="btn_img" onclick="plusDivs(+1)">&#10095;</button>
+
         <div class="txt_product">
             <div class="price_name">
                 <p>{{ product.name }}</p>
@@ -42,9 +48,7 @@
                 </div>
             </div>
 
-            <a href="{{ path('addCart',{'idProduct' : product.id}) }}">
-                <p class="add_cart">Ajouter aux panier</p>
-            </a>
+            <button id="myBtn">Ajouter au panier</button>
         </div>
     </div>
     <div>
@@ -60,9 +64,74 @@
         {% endfor %}
     </div>
 
+{#    <!-- The Modal -->#}
+{#    <div id="myModal" class="modal">#}
+
+{#        <!-- Modal content -->#}
+{#        <div class="modal-content">#}
+{#            <span class="close">&times;</span>#}
+{#            <p>Voulez-vous ajouter ce produit au panier?</p>#}
+{#            <div>#}
+{#                <button><a href="{{ path('addCart',{'idProduct' : product.id}) }}">Oui</a></button>#}
+{#                <button id="close">Non</button>#}
+{#            </div>#}
+{#        </div>#}
+
+{#    </div>#}
+    {% include '_partiels/_modal'~modal~'.html.twig' %}
 
 {% endblock %}
 
+
 {% block newsletter %}
     {% include '_partiels/_newsletter.html.twig' %}
+{% endblock %}
+
+{% block script  %}
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        var close = document.getElementById("close")
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        close.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
 {% endblock %}

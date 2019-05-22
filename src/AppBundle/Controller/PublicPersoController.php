@@ -52,8 +52,21 @@ class PublicPersoController extends Controller
             }
         }
 
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/personnalisation.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'form' => $form->createView(),
+                ]
+            );
+        }
+
         return $this->render('publicViews/personnalisation.html.twig',
             [
+                'template' => 'base.html.twig',
                 'form' => $form->createView(),
             ]
         );

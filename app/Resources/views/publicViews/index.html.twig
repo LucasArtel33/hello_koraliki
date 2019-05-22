@@ -34,12 +34,12 @@
                     <a href="{{ path('personnalisation') }}">
                         <li class="item_header">Personnalisation</li>
                     </a>
-                    <a href="">
-                        <li class="item_header">Compte Client</li>
+                    <a href="{{ path('fos_user_security_login') }}">
+                        <li class="item_header">Connexion</li>
                     </a>
-                    <a href="">
-                        <li class="item_header">Panier</li>
-                    </a>
+{#                    <a href="{{ path('panier') }}">#}
+{#                        <li class="item_header">Panier</li>#}
+{#                    </a>#}
                 </ul>
             </nav>
         </header>
@@ -48,7 +48,7 @@
                 sont disponibles. Si vous avez la moindre "demande?" à me faire, n’hésitez pas à vous rendre sur  l’onglet
                 « Personnalisation ». En vous souhaitant une bonne visite !
             </p>
-            <a class="button_collection" href="">La Collection</a>
+{#            <a class="button_collection" href="">La Collection</a>#}
         </article>
     </div>
 
@@ -58,9 +58,16 @@
             <div class="highlight_product">
                 {% for product in products %}
                     <div class="img_index">
-                        <a href="{{ path(product.category.type,{'id' : product.id}) }}">
-                            <img class="img" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
-                        </a>
+                        <div class="hovereffect">
+                            <a href="">
+                                <img class="img_highlight" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+                            </a>
+                            <div class="overlay">
+                                <a href="{{ path(product.category.type,{'id' : product.id}) }}">
+                                    <h2>{{ product.name }} </h2>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -92,7 +99,7 @@
                 <p>Visa, Mastercard, Virement Bancaire, Paypal.</p>
             </div>
             <div class="livraison">
-                <h3> Livraison Gratuite</h3>
+                <h3> Livraison en point relais</h3>
                 <p>En France Métropolitaine sans minimum d’achat</p>
             </div>
             <div class="handmade">

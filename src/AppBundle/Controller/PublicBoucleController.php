@@ -19,12 +19,22 @@ class PublicBoucleController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '3', 'enabled' => '1']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/boucle.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/boucle.html.twig',
             [
+                'template' => 'base.html.twig',
                 'products' => $products,
-                'nombre' => $nombre,
             ]
         );
     }
@@ -37,12 +47,22 @@ class PublicBoucleController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '3', 'enabled' => '1'],['price' => 'ASC']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/boucle.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/boucle.html.twig',
             [
+                'template' => 'base.html.twig',
                 'products' => $products,
-                'nombre' => $nombre,
             ]
         );
     }
@@ -55,12 +75,22 @@ class PublicBoucleController extends Controller
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $products = $productRepository->findBy(['category' => '3', 'enabled' => '1'],['price' => 'DESC']);
 
-        $nombre = count($products);
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/boucle.html.twig',
+                [
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
 
         return $this->render('publicViews/boucle.html.twig',
             [
+                'template' => 'base.html.twig',
                 'products' => $products,
-                'nombre' => $nombre,
             ]
         );
     }
@@ -82,8 +112,23 @@ class PublicBoucleController extends Controller
                     $moreProduct[] = $products[$rand_keys];
             }
         }
+
+        $user = $this->getUser();
+
+        if($user != null)
+        {
+            return $this->render('publicViews/product.html.twig',
+                [
+                    'modal' => 'Login',
+                    'template' => 'baseLog.html.twig',
+                    'products' => $products,
+                ]
+            );
+        }
         return $this->render('publicViews/product.html.twig',
             [
+                'modal' => 'Public',
+                'template' => 'base.html.twig',
                 'product' => $product,
                 'moreProduct' => $moreProduct,
             ]

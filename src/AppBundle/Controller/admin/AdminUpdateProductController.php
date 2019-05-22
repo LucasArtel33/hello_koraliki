@@ -60,7 +60,6 @@ class AdminUpdateProductController extends Controller
         {
             $productUpdate = new Product();
 
-            $referenceProduct = $product->getReference();
             $stockProduct = $product->getStock();
             $priceProduct = $product->getPrice();
             $nameProduct = $product->getName();
@@ -69,7 +68,6 @@ class AdminUpdateProductController extends Controller
             $categoryProduct = $product->getCategory();
             $imgProduct = $product->getImg();
 
-            $productUpdate->setReference($referenceProduct);
             $productUpdate->setStock($stockProduct);
             $productUpdate->setPrice($priceProduct);
             $productUpdate->setName($nameProduct);
