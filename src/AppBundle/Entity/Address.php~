@@ -24,6 +24,13 @@ class Address
     /**
      * @var string
      *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="address1", type="string", length=255)
      */
     private $address1;
@@ -38,7 +45,7 @@ class Address
     /**
      * @var int
      *
-     * @ORM\Column(name="zipcode", type="smallint")
+     * @ORM\Column(name="zipcode", type="integer")
      */
     private $zipcode;
 
@@ -57,13 +64,20 @@ class Address
     private $country;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AddressType", inversedBy="address")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="address")
      */
-    private $type;
+    private $user;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Orders", mappedBy="address")
+     */
+    private $order;
+
+    /**
+     * Constructor
+     */
     public function __construct()
     {
-        $this->type = new ArrayCollection();
+        $this->user = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
 }

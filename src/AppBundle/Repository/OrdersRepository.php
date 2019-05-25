@@ -2,9 +2,6 @@
 
 namespace AppBundle\Repository;
 
-use AppBundle\Entity\Orders;
-use AppBundle\Entity\User;
-
 /**
  * OrdersRepository
  *
@@ -18,7 +15,7 @@ class OrdersRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->createQueryBuilder('o');
 
         $qb->leftJoin('o.products','product')
-//            ->where('statusOrder = 1')
+            ->where('o.statusOrder = 1')
             ->andWhere('o.user = :userId')
             ->setParameter('userId', $userId)
             ->addSelect('product');
@@ -26,7 +23,6 @@ class OrdersRepository extends \Doctrine\ORM\EntityRepository
         $query = $qb->getQuery();
 
         $result = $query->getResult();
-
 
         return $result;
     }

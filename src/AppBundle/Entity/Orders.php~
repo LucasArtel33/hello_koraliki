@@ -27,14 +27,19 @@ class Orders
     private $statusOrder;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Product", mappedBy="order")
+     */
+    private $products;
+
+    /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="order")
      */
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity="RelOrderProduct", mappedBy="orderId")
+     * @ORM\ManyToOne(targetEntity="Address", inversedBy="order")
      */
-    private $relProduct;
+    private $address;
 
     /**
      * @var \DateTime

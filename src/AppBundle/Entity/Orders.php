@@ -37,6 +37,11 @@ class Orders
     private $user;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Address", inversedBy="order")
+     */
+    private $address;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date", type="datetime")
@@ -165,5 +170,29 @@ class Orders
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set address
+     *
+     * @param \AppBundle\Entity\Address $address
+     *
+     * @return Orders
+     */
+    public function setAddress(\AppBundle\Entity\Address $address = null)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return \AppBundle\Entity\Address
+     */
+    public function getAddress()
+    {
+        return $this->address;
     }
 }

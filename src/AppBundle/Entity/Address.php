@@ -24,6 +24,13 @@ class Address
     /**
      * @var string
      *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="address1", type="string", length=255)
      */
     private $address1;
@@ -38,7 +45,7 @@ class Address
     /**
      * @var int
      *
-     * @ORM\Column(name="zipcode", type="smallint")
+     * @ORM\Column(name="zipcode", type="integer")
      */
     private $zipcode;
 
@@ -57,15 +64,22 @@ class Address
     private $country;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AddressType", inversedBy="address")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="address")
      */
-    private $type;
+    private $user;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Orders", mappedBy="address")
+     */
+    private $order;
+
+    /**
+     * Constructor
+     */
     public function __construct()
     {
-        $this->type = new ArrayCollection();
+        $this->user = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
 
     /**
      * Get id
@@ -75,6 +89,30 @@ class Address
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Address
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**
@@ -198,36 +236,60 @@ class Address
     }
 
     /**
-     * Add type
+     * Set user
      *
-     * @param \AppBundle\Entity\AddressType $type
+     * @param \AppBundle\Entity\User $user
      *
      * @return Address
      */
-    public function addType(\AppBundle\Entity\AddressType $type)
+    public function setUser(\AppBundle\Entity\User $user = null)
     {
-        $this->type[] = $type;
+        $this->user = $user;
 
         return $this;
     }
 
     /**
-     * Remove type
+     * Get user
      *
-     * @param \AppBundle\Entity\AddressType $type
+     * @return \AppBundle\Entity\User
      */
-    public function removeType(\AppBundle\Entity\AddressType $type)
+    public function getUser()
     {
-        $this->type->removeElement($type);
+        return $this->user;
     }
 
     /**
-     * Get type
+     * Add order
+     *
+     * @param \AppBundle\Entity\Orders $order
+     *
+     * @return Address
+     */
+    public function addOrder(\AppBundle\Entity\Orders $order)
+    {
+        $this->order[] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Remove order
+     *
+     * @param \AppBundle\Entity\Orders $order
+     */
+    public function removeOrder(\AppBundle\Entity\Orders $order)
+    {
+        $this->order->removeElement($order);
+    }
+
+    /**
+     * Get order
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getType()
+    public function getOrder()
     {
-        return $this->type;
+        return $this->order;
     }
 }

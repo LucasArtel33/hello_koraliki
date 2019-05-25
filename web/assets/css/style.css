@@ -646,6 +646,23 @@ footer {
   height: 100%;
 }
 
+.btn_commande {
+  display: block;
+  margin: 3% auto 0;
+}
+
+.address_title {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.form_address {
+  display: flex;
+}
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -787,6 +804,37 @@ footer {
   -ms-transform: translatey(0);
   -webkit-transform: translatey(0);
   transform: translatey(0);
+}
+
+.info_title {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.info_address_add {
+  font-family: "Cinzel", serif;
+  color: #086970;
+  font-size: 1.2em;
+  display: block;
+  width: fit-content;
+  margin: 3% auto;
+}
+
+.addAdress_title {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.addAddress_form {
+  width: fit-content;
+  display: block;
+  margin: 3% auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -48,15 +48,17 @@ class User extends BaseUser
      */
     private $createdAt;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Address", mappedBy="user")
+     */
+    private $address;
+
     public function __construct()
     {
         parent::__construct();
         $this->createdAt = new \DateTime();
         $this->order = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
-
-
 
     /**
      * Set lastName
@@ -186,5 +188,39 @@ class User extends BaseUser
     public function getOrder()
     {
         return $this->order;
+    }
+
+    /**
+     * Add address
+     *
+     * @param \AppBundle\Entity\Address $address
+     *
+     * @return User
+     */
+    public function addAddress(\AppBundle\Entity\Address $address)
+    {
+        $this->address[] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Remove address
+     *
+     * @param \AppBundle\Entity\Address $address
+     */
+    public function removeAddress(\AppBundle\Entity\Address $address)
+    {
+        $this->address->removeElement($address);
+    }
+
+    /**
+     * Get address
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAddress()
+    {
+        return $this->address;
     }
 }

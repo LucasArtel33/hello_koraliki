@@ -48,13 +48,15 @@ class User extends BaseUser
      */
     private $createdAt;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Address", mappedBy="user")
+     */
+    private $address;
+
     public function __construct()
     {
         parent::__construct();
         $this->createdAt = new \DateTime();
         $this->order = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
-
-
 }

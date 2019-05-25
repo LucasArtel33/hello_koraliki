@@ -38,3 +38,23 @@
 .btn_remove{
   height: 100%;
 }
+
+.btn_commande{
+  display: block;
+  margin: 3% auto 0;
+}
+
+// Selection adresse
+
+.address_title{
+  font-family: $font;
+  color: $bleu_fonce;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.form_address{
+  display: flex;
+
+}

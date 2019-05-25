@@ -7,7 +7,6 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Orders;
 use AppBundle\Entity\Product;
 use AppBundle\Entity\Status_orders;
-use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -30,7 +29,7 @@ class PublicCartController extends Controller
 //          Je recupere un array qui contient, si il en existe une, une commande lie a
 //          l'utilisateur au status 1 soit 'panier'
             $orderRepository = $this->getDoctrine()->getRepository(Orders::class);
-            $order = $orderRepository->findBy(['statusOrder' => 1, 'user' => $userId]);
+            $order = $orderRepository->findOneBy(['statusOrder' => 1, 'user' => $userId]);
 //          je verifie qu'il y a une commande dans le panier, sinon j'en initialise une nouvelle
 
 //          si il n'y a pas de commande j'en initie une nouvelle
@@ -38,10 +37,7 @@ class PublicCartController extends Controller
             {
                 $order = new Orders();
             }
-            else{
-//          sinon je recupere la commande dans
-                $order =$order['0'];
-            }
+
 //          je recupere le produit cible avec l'id recup dans la wildcard
             $productRepository = $this->getDoctrine()->getRepository(Product::class);
             $productOrder = $productRepository->find($idProduct);
@@ -87,14 +83,15 @@ class PublicCartController extends Controller
             }
             $order = $order['0'];
             $product = $order->getProducts();
-            $total =0;
+            $total = 0;
             foreach ($product as &$value )
             {
-                $test = $value->getPrice();
-                $total += $test;
+                $price = $value->getPrice();
+                $total += $price;
             }
             $total +=5;
             return $this->render('publicViews/publicPanier.html.twig',
+
                 [
                     'products' => $product,
                     'total' => $total
@@ -114,8 +111,7 @@ class PublicCartController extends Controller
         $userId = $user->getId();
 
         $orderRepository = $this->getDoctrine()->getRepository(Orders::class);
-        $order = $orderRepository->findBy(['statusOrder' => 1, 'user' => $userId]);
-        $order =$order['0'];
+        $order = $orderRepository->findOneBy(['statusOrder' => 1, 'user' => $userId]);
 
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $productOrder = $productRepository->find($id);
@@ -130,4 +126,6 @@ class PublicCartController extends Controller
 
         return $this->redirectToRoute('panier');
     }
+
+
 }

@@ -1,0 +1,44 @@
+{% extends 'template/baseLog.html.twig' %}
+
+{% block title %}
+    commande
+{% endblock %}
+
+{% block content %}
+    <h1 class="address_title">Selection de l'adresse de livraison</h1>
+
+    <form method="post">
+        {% for address in allAddress %}
+            <div class="form_address">
+                <input type="radio" name="address" value="{{ address.name }}">
+                <p> {{ address.name }} </p>
+            </div>
+        {% endfor %}
+        <input type="radio" name="address" value="newAddress">
+        <div class="col">
+            <label for="addressName">Nom de l'adresse :</label>
+            <input type="text" id="addressName" name="addressName">
+        </div>
+        <div class="col">
+            <label for="address1">Adresse :</label>
+            <input type="text" id="address1" name="address1">
+        </div>
+        <div class="col">
+            <label for="address2">Complement d'adresse :</label>
+            <input type="text" id="address2" name="address2">
+        </div>
+        <div class="col">
+            <label for="zipCode">Code postal :</label>
+            <input type="text" id="zipCode" name="zipCode">
+        </div>
+        <div class="col">
+            <label for="city">Ville :</label>
+            <input type="text" id="city" name="city">
+        </div>
+        <div class="col">
+            <label for="country">Pays :</label>
+            <input type="text" id="country" name="country">
+        </div>
+        <input type="submit" value="Envoyer">
+    </form>
+{% endblock %}
