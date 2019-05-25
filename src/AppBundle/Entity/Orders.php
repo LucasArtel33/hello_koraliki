@@ -22,7 +22,7 @@ class Orders
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Status_orders")
+     * @ORM\ManyToOne(targetEntity="Status_orders", fetch="EAGER")
      */
     private $statusOrder;
 
@@ -37,7 +37,7 @@ class Orders
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Address", inversedBy="order")
+     * @ORM\ManyToOne(targetEntity="Address", inversedBy="order", fetch="EAGER")
      */
     private $address;
 

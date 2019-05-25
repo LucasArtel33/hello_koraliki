@@ -4,10 +4,14 @@
     Mes informations
 {% endblock %}
 
- {% block content %}
-     <h1 class="info_title">Mes informations</h1>
+{% block content %}
+    <h1 class="info_title">Mes informations</h1>
 
-     <button class="info_address_add">
+     <button class="info_button">
          <a href="{{ path('addAddress') }}">Ajouter une adresse</a>
      </button>
- {% endblock %}
+     <button class="info_button">
+         <a href="{{ path('historiqueOrders') }}">Mes commandes</a>
+     </button>
+
+{% endblock %}

@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 
 
 use AppBundle\Entity\Address;
+use AppBundle\Entity\Orders;
 use AppBundle\Form\AddressType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -54,4 +55,24 @@ class PublicAccount extends Controller
             ]
         );
     }
+
+    /**
+     * @Route("/historique_Commande", name="historiqueOrders")
+     */
+    public function historiqueOrdersAction()
+    {
+        $user = $this->getUser();
+
+        $orderRepository = $this->getDoctrine()->getRepository(Orders::class);
+        $orders = $orderRepository->findBy(['user' => $user]);
+//        dump($orders);die;
+
+        return $this->render('publicViews/suiviCommande.html.twig',
+            [
+                'orders' => $orders,
+            ]
+        );
+    }
+
+
 }

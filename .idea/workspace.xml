@@ -2,33 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab345c1-9af2-4bfe-b21e-432082ee6b75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/addAddress.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/commande.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicOrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/AddressType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/sass/_informationClient.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/sass/addAddress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/suiviCommande.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/adminViews/adminGestionProduct.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/adminViews/adminGestionProduct.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/indexLogin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/indexLogin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/informationClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/informationClient.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/template/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/template/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/template/baseLog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/template/baseLog.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminGestionProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminGestionProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/AddressType.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_panier.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/sass/_informationClient.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_informationClient.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,22 +36,40 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php">
+            <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="542">
-                  <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="33" />
+                <state relative-caret-position="816">
+                  <caret line="68" selection-start-line="68" selection-end-line="68" />
                   <folding>
-                    <element signature="e#42#70#0#PHP" expanded="true" />
+                    <element signature="e#42#71#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/suiviCommande.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/informationClient.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="273">
+                  <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicOrderController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1263">
-                  <caret line="2" selection-start-line="1" selection-end-line="2" />
+                <state relative-caret-position="-3">
+                  <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
                   <folding>
                     <element signature="e#42#71#0#PHP" expanded="true" />
                   </folding>
@@ -86,17 +84,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/assets/sass/_panier.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="21">
-                  <caret line="19" selection-start-line="19" selection-end-line="19" />
+                <state relative-caret-position="126">
+                  <caret line="24" column="18" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="24" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/assets/sass/_informationClient.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="441">
+                  <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Orders.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
-                  <caret line="99" column="34" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="34" />
+                <state relative-caret-position="481">
+                  <caret line="39" column="79" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="79" />
                 </state>
               </provider>
             </entry>
@@ -128,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Product.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/ProductRepository.php" />
         <option value="$PROJECT_DIR$/web/assets/sass/_modalPanier.scss" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register.html.twig" />
@@ -161,24 +167,25 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminGestionProduct.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/adminViews/adminGestionProduct.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" />
-        <option value="$PROJECT_DIR$/web/assets/sass/_informationClient.scss" />
         <option value="$PROJECT_DIR$/web/assets/sass/style.scss" />
         <option value="$PROJECT_DIR$/web/assets/sass/addAddress.scss" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AddressType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/publicViews/addAddress.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/SelectAddressType.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/publicViews/informationClient.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/sass/_panier.scss" />
         <option value="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AddressOrderType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/publicViews/commande.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicOrderController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/publicViews/informationClient.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/publicViews/suiviCommande.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php" />
+        <option value="$PROJECT_DIR$/web/assets/sass/_informationClient.scss" />
       </list>
     </option>
   </component>
@@ -393,12 +400,12 @@
       <workItem from="1558599807554" duration="2539000" />
       <workItem from="1558614537377" duration="398000" />
       <workItem from="1558615317298" duration="5422000" />
-      <workItem from="1558683724203" duration="20386000" />
+      <workItem from="1558683724203" duration="21697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151240000" />
+    <option name="totallyTimeSpent" value="152551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-377" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -462,13 +469,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/bracelet.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="37" column="14" selection-start-line="28" selection-start-column="2" selection-end-line="37" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/emptyCart.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -593,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/sass/_informationClient.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminGestionProduct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -699,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/informationClient.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AddressOrderType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -775,37 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/sass/_panier.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="99" column="34" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#42#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/commande.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
@@ -823,13 +778,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/commande.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicOrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1263">
-          <caret line="2" selection-start-line="1" selection-end-line="2" />
+        <state relative-caret-position="-3">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
           <folding>
             <element signature="e#42#71#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/informationClient.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="39" column="79" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#42#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/sass/_panier.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/sass/_informationClient.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/suiviCommande.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

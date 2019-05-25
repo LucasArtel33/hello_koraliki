@@ -814,13 +814,20 @@ footer {
   margin-top: 8%;
 }
 
-.info_address_add {
+.info_button {
   font-family: "Cinzel", serif;
   color: #086970;
   font-size: 1.2em;
   display: block;
   width: fit-content;
   margin: 3% auto;
+}
+
+.cmd {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2% auto;
 }
 
 .addAdress_title {
