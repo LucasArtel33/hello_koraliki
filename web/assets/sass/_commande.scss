@@ -1,0 +1,48 @@
+.address_title{
+  font-family: $font;
+  color: $bleu_fonce;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.allOldAddress{
+  width: 80%;
+  display: block;
+  margin: 2% auto;
+}
+
+.oldAddress {
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-family: $font;
+  color: $bleu_clair;
+}
+
+.newAddress{
+  font-family: $font;
+  color: $bleu_clair;
+  clear: both;
+  width: fit-content;
+  display: block;
+  margin: 2% auto;
+}
+
+.form_newAddress{
+  widows: 100%;
+}
+
+.col_add{
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1% auto;
+}
+
+
+.col_btn{
+  width: fit-content;
+  display: block;
+  margin: 1% auto;
+}

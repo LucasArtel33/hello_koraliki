@@ -590,7 +590,7 @@ footer {
 }
 
 .login_form {
-  width: fit-content;
+  width: 30%;
   margin: 2% auto;
 }
 
@@ -600,12 +600,44 @@ footer {
   color: #086970;
 }
 
-.form_item {
-  margin: 2% 0;
+.login_input {
+  display: block;
+  margin: 1% auto;
 }
 
-.register_label {
+.form_item {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% auto;
+  width: 100%;
+}
+
+.btn_register {
   font-family: "Cinzel", serif;
+  color: #063442;
+  font-size: 1.2em;
+  width: fit-content;
+  display: block;
+  margin: 2% auto;
+}
+
+.register_form_item {
+  font-family: "Cinzel", serif;
+  color: #086970;
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 0;
+}
+
+.register_form {
+  width: 30%;
+  display: block;
+  margin: 2% auto;
+}
+
+.btn_register {
+  display: block;
+  margin: 5% auto;
 }
 
 .empty {
@@ -651,16 +683,19 @@ footer {
   margin: 3% auto 0;
 }
 
-.address_title {
+.addCart_title {
   font-family: "Cinzel", serif;
   color: #063442;
   font-size: 2em;
+  margin: 8%;
   text-align: center;
-  margin-top: 8%;
 }
 
-.form_address {
+.btn_addCart {
+  width: 40%;
+  margin: 5% auto;
   display: flex;
+  justify-content: space-between;
 }
 
 /* The Modal (background) */
@@ -830,6 +865,18 @@ footer {
   margin: 2% auto;
 }
 
+.inscription_confirm {
+  text-align: center;
+  margin-top: 2%;
+  color: #086970;
+}
+
+.button_home {
+  width: fit-content;
+  display: block;
+  margin: 2% auto;
+}
+
 .addAdress_title {
   font-family: "Cinzel", serif;
   color: #063442;
@@ -842,6 +889,54 @@ footer {
   width: fit-content;
   display: block;
   margin: 3% auto;
+}
+
+.address_title {
+  font-family: "Cinzel", serif;
+  color: #063442;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.allOldAddress {
+  width: 80%;
+  display: block;
+  margin: 2% auto;
+}
+
+.oldAddress {
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  color: #086970;
+}
+
+.newAddress {
+  font-family: "Cinzel", serif;
+  color: #086970;
+  clear: both;
+  width: fit-content;
+  display: block;
+  margin: 2% auto;
+}
+
+.form_newAddress {
+  widows: 100%;
+}
+
+.col_add {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1% auto;
+}
+
+.col_btn {
+  width: fit-content;
+  display: block;
+  margin: 1% auto;
 }
 
 /*# sourceMappingURL=style.css.map */

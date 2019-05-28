@@ -1,0 +1,13 @@
+{% extends 'template/baseLog.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <h1 class="info_title">Inscription réussi</h1>
+    <p class="inscription_confirm">{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    {% if targetUrl %}
+        <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+    {% endif %}
+    <button class="button_home">
+        <a href="{{ path('home') }}">Retour à l'accueil</a>
+    </button>
+{% endblock fos_user_content %}

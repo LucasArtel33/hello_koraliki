@@ -4,48 +4,47 @@
 {% block fos_user_content %}
 
     <h1 class="login_title">Inscription</h1>
-
-    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-
-        {{ form_errors(form) }}
-        <div>
-            {{ form_label(form.civility, 'Civilité :', {'attr': {'class': 'register_label'}}) }}
-            {{ form_widget(form.civility, {'attr': {'class': 'form-control'}}) }}
-            {{ form_errors(form.civility) }}
-        </div>
-        <div>
-            {{ form_label(form.firstName, 'Prénom :', {'attr': {'class': 'register_label'}}) }}
-            {{ form_widget(form.firstName, {'attr': {'class': 'form-control'}}) }}
-            {{ form_errors(form.firstName) }}
-        </div>
-        <div>
-            {{ form_label(form.lastName, 'Nom :', {'attr': {'class': 'register_label'}}) }}
-            {{ form_widget(form.lastName, {'attr': {'class': 'form-control'}}) }}
-            {{ form_errors(form.lastName) }}
-        </div>
-        <div>
-            {{ form_label(form.username, 'Nom d\'utilisateur :', {'attr': {'class': 'register_label'}}) }}
-            {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
-            {{ form_errors(form.username) }}
-        </div>
-        <div>
-            {{ form_label(form.email, 'Adresse e-mail :', {'attr': {'class': 'register_label'}}) }}
-            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
-            {{ form_errors(form.email) }}
-        </div>
-        <div>
-            {{ form_label(form.plainPassword.first, 'Mot de passe :', {'attr': {'class': 'register_label'}}) }}
-            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
-            {{ form_errors(form.plainPassword.first) }}
-        </div>
-        <div>
-            {{ form_label(form.plainPassword.second, 'Répéter le mot de passe :', {'attr': {'class': 'register_label'}}) }}
-            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
-        </div>
-        {{ form_rest(form) }}
-        <div>
-            <input type="submit" value="{{ 'registration.submit'|trans }}" />
-        </div>
-
-    {{ form_end(form) }}
+    <div class="register_form">
+        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+            {{ form_errors(form) }}
+            <div class="register_form_item">
+                {{ form_label(form.civility, 'Civilité :') }}
+                {{ form_widget(form.civility, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.civility) }}
+            </div>
+            <div class="register_form_item">
+                {{ form_label(form.firstName, 'Prénom :') }}
+                {{ form_widget(form.firstName, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.firstName) }}
+            </div>
+            <div class="register_form_item">
+                {{ form_label(form.lastName, 'Nom :') }}
+                {{ form_widget(form.lastName, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.lastName) }}
+            </div>
+            <div class="register_form_item">
+                {{ form_label(form.username, 'Nom d\'utilisateur :') }}
+                {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.username) }}
+            </div>
+            <div class="register_form_item">
+                {{ form_label(form.email, 'Adresse e-mail :') }}
+                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.email) }}
+            </div>
+            <div class="register_form_item">
+                {{ form_label(form.plainPassword.first, 'Mot de passe :') }}
+                {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.plainPassword.first) }}
+            </div>
+            <div class="register_form_item">
+                {{ form_label(form.plainPassword.second, 'Répéter le mot de passe :') }}
+                {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            {{ form_rest(form) }}
+            <div class="btn_register">
+                <input type="submit" value="{{ 'registration.submit'|trans }}" />
+            </div>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}

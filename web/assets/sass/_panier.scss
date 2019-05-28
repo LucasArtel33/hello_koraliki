@@ -44,17 +44,19 @@
   margin: 3% auto 0;
 }
 
-// Selection adresse
+//Ajout panier
 
-.address_title{
+.addCart_title{
   font-family: $font;
   color: $bleu_fonce;
   font-size: 2em;
+  margin: 8%;
   text-align: center;
-  margin-top: 8%;
 }
 
-.form_address{
+.btn_addCart{
+  width: 40%;
+  margin: 5% auto;
   display: flex;
-
+  justify-content: space-between;
 }

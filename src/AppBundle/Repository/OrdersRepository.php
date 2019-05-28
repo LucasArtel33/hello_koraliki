@@ -22,7 +22,7 @@ class OrdersRepository extends \Doctrine\ORM\EntityRepository
 
         $query = $qb->getQuery();
 
-        $result = $query->getResult();
+        $result = $query->getOneOrNullResult();
 
         return $result;
     }

@@ -29,9 +29,12 @@
             </div>
             <div class="form_item">
                 <input class="login_input" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+
             </div>
 
         </form>
-        <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
+        <button class="btn_register">
+            <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
+        </button>
     </div>
 {% endblock %}
