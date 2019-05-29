@@ -25,7 +25,8 @@ class PublicPersoController extends Controller
         $message = \Swift_Message::newInstance("HelloKoraliki mail ". $data["firstname"])
             ->setFrom([$ContactMail => "Message par ".$data["firstname"]." ".$data["lastname"]])
             ->setTo([ $ContactMail => $ContactMail ])
-            ->setBody($data["message"]."<br>ContactMail :".$data["email"]);
+            ->setBody($data["message"]."<br>ContactMail :".$data["email"])
+            ->attach(\Swift_Attachment::fromPath('/web/assets/document/'.$laVariable.'.pdf'));
 
         return $mailer->send($message);
     }

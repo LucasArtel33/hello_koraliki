@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab345c1-9af2-4bfe-b21e-432082ee6b75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/sass/_commande.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/commande.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/commande.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/connection.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/_informationClient.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_informationClient.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_panier.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/_register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_register.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicPersoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicPersoController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,109 +18,74 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50348026">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Resources/views/template/base.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="567">
-                  <caret line="27" column="51" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="51" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/bracelet.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="7" selection-start-column="7" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#42#70#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2541">
-                  <caret line="121" column="9" selection-start-line="119" selection-start-column="7" selection-end-line="121" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="546">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="6" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/assets/sass/_panier.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1260">
-                  <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="87" column="43" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="43" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="16" column="10" selection-start-line="9" selection-start-column="3" selection-end-line="16" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/template/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="27" column="51" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/bracelet.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+              <folding>
+                <element signature="e#42#70#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="632">
+              <caret line="73" column="21" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="121" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="6" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -174,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicBraceletController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicCollierController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicPersoController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/publicViews/bracelet.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/sass/_index.scss" />
         <option value="$PROJECT_DIR$/web/assets/sass/_highlight.scss" />
@@ -212,6 +160,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PublicPersoController.php" />
       </list>
     </option>
   </component>
@@ -466,17 +415,18 @@
       <workItem from="1558615317298" duration="5422000" />
       <workItem from="1558683724203" duration="22025000" />
       <workItem from="1558942289114" duration="14042000" />
-      <workItem from="1559043617881" duration="626000" />
+      <workItem from="1559043617881" duration="2876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167547000" />
+    <option name="totallyTimeSpent" value="169797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21306472" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21306472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -489,7 +439,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993895" visible="true" weight="0.3265306" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993895" weight="0.3265306" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.327551" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -653,16 +603,6 @@
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicPersoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="49" column="45" lean-forward="true" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding>
-            <element signature="e#42#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicAccount.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -785,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/template/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/bracelet.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -803,13 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="121" column="9" selection-start-line="119" selection-start-column="7" selection-end-line="121" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -827,20 +753,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php">
+    <entry file="file://$PROJECT_DIR$/web/assets/sass/_panier.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+          <caret line="87" column="43" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
           <folding>
             <element signature="e#42#70#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/sass/_panier.scss">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PublicPersoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        <state relative-caret-position="158">
+          <caret line="24" column="85" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="85" />
+          <folding>
+            <element signature="e#42#73#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -851,10 +794,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Product.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="87" column="43" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="43" />
+        <state relative-caret-position="632">
+          <caret line="73" column="21" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="121" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/template/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="27" column="51" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="51" />
         </state>
       </provider>
     </entry>
