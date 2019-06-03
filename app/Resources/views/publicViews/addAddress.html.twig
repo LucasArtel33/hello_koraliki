@@ -9,38 +9,38 @@
 
     <div class="addAddress_form">
         {{ form_start(addressForm) }}
-        <div class="col">
+        <div class="row_address">
             {{ form_label(addressForm.name, 'Nom de l\'adresse :') }}
             {{ form_errors(addressForm.name) }}
             {{ form_widget(addressForm.name, {'attr': {'class': 'form-control'}}) }}
         </div>
-        <div class="col">
+        <div class="row_address">
             {{ form_label(addressForm.address1, 'Adresse :') }}
             {{ form_errors(addressForm.address1) }}
             {{ form_widget(addressForm.address1, {'attr': {'class': 'form-control'}}) }}
         </div>
-        <div class="col">
+        <div class="row_address">
             {{ form_label(addressForm.address2, 'Complement d\'addresse :') }}
             {{ form_errors(addressForm.address2) }}
             {{ form_widget(addressForm.address2, {'attr': {'class': 'form-control'}}) }}
         </div>
-        <div class="col">
+        <div class="row_address">
             {{ form_label(addressForm.zipcode, 'Code postal :') }}
             {{ form_errors(addressForm.zipcode) }}
             {{ form_widget(addressForm.zipcode, {'attr': {'class': 'form-control'}}) }}
         </div>
-        <div class="col">
+        <div class="row_address">
             {{ form_label(addressForm.city, 'Ville') }}
             {{ form_errors(addressForm.city) }}
             {{ form_widget(addressForm.city, {'attr': {'class': 'form-control'}}) }}
         </div>
-        <div class="col">
+        <div class="row_address">
             {{ form_label(addressForm.country, 'Pays :') }}
             {{ form_errors(addressForm.country) }}
             {{ form_widget(addressForm.country, {'attr': {'class': 'form-control'}}) }}
         </div>
-        <div class="col">
-            {{ form_widget(addressForm.submit) }}
+        <div>
+            {{ form_widget(addressForm.submit, {'attr': {'class': 'submit_address'}}) }}
         </div>
         {{ form_end(addressForm) }}
     </div>

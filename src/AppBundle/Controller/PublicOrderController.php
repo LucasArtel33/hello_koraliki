@@ -74,7 +74,7 @@ class PublicOrderController extends Controller
                 //              GESTION DU STOCK
 
                 $orderProducts = $orderRepository->findProductByOrder($userId);
-                $orderProducts = $orderProducts['0'];
+
                 $product = $orderProducts->getProducts();
                 foreach ($product as &$value)
                 {

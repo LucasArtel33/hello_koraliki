@@ -6,43 +6,55 @@
 }
 
 //panier plein
-
-.title_cart{
+.title_cart {
   font-family: $font;
+  color: $bleu_fonce;
   text-align: center;
   margin-top: 8%;
+  font-size: 2em;
 }
 
-.img_cart{
-  width: 10%;
-  height: 10%;
+@media screen and (min-width: 1280px) {
+
+  .img_cart {
+    width: 10%;
+    height: 10%;
+  }
+
+  .cart_product {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2% auto;
+  }
+
+  .delivery_cart {
+    text-align: center;
+  }
+
+  .total_cart {
+    margin: 2% auto;
+    text-align: right;
+    width: 80%;
+  }
+
+  .btn_remove {
+    height: 100%;
+  }
+
+  .btn_commande {
+    display: block;
+    margin: 3% auto 0;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .img_cart{
+    width: 60%;
+    display: block;
+    margin: auto;
+  }
 }
 
-.cart_product{
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 2% auto;
-}
-
-.delivery_cart{
-  text-align: center;
-}
-
-.total_cart{
-  margin: 2% auto;
-  text-align: right;
-  width: 80%;
-}
-
-.btn_remove{
-  height: 100%;
-}
-
-.btn_commande{
-  display: block;
-  margin: 3% auto 0;
-}
 
 //Ajout panier
 

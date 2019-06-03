@@ -84,19 +84,11 @@
   margin-bottom: 1%;
 }
 
-.button_perso{
-  border: 1px solid $bleu_clair;
-  border-radius: 10px;
-  padding: 1%;
-  background-color: $rose_clair;
-  color: $bleu_clair;
-  font-family: $font;
-  font-size: 1em;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 20%;
-  text-align: center;
+
+
+.button_perso:hover{
+  background-color: $rose_medium;
+  font-size: 1.2em;
 }
 
 .title_reussi{
@@ -127,4 +119,38 @@
   margin-top: 7%;
   margin-bottom: 5%;
   font-size: 1.2em;
+}
+
+@media screen and (min-width: 1280px) {
+  .button_perso{
+    border: 1px solid $bleu_clair;
+    border-radius: 10px;
+    padding: 1%;
+    background-color: $rose_clair;
+    color: $bleu_clair;
+    font-family: $font;
+    font-size: 1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .button_perso{
+    border: 1px solid $bleu_clair;
+    border-radius: 10px;
+    padding: 1%;
+    background-color: $rose_clair;
+    color: $bleu_clair;
+    font-family: $font;
+    font-size: 1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 35%;
+    text-align: center;
+  }
 }

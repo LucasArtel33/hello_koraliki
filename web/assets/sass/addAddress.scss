@@ -5,9 +5,25 @@
   text-align: center;
   margin-top: 8%;
 }
-
-.addAddress_form{
-  width: fit-content;
-  display: block;
-  margin: 3% auto;
+.row_address {
+  font-family: $font;
+  color: $bleu_clair;
+  display: flex;
+  margin: 2%;
+  justify-content: space-between;
 }
+.submit_address {
+  display: block;
+  margin: 5% auto;
+  font-family: $font;
+  color: $bleu_fonce;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 1280px) {
+  .addAddress_form {
+    width: 40%;
+    display: block;
+    margin: 3% auto;
+  }
+}
+

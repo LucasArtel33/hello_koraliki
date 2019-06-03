@@ -1,4 +1,4 @@
-.register_form_item{
+.register_form_item {
   font-family: $font;
   color: $bleu_clair;
   display: flex;
@@ -6,13 +6,26 @@
   margin: 1% 0;
 }
 
-.register_form{
-  width: 30%;
-  display: block;
-  margin: 2% auto;
+@media screen and (min-width: 1280px) {
+
+  .register_form {
+    width: 30%;
+    display: block;
+    margin: 2% auto;
+  }
+
+  .btn_register {
+    display: block;
+    margin: 5% auto;
+  }
 }
 
-.btn_register{
-  display: block;
-  margin: 5% auto;
+@media screen and (max-width: 1279px) {
+
+  .register_form {
+    width: 80%;
+    display: block;
+    margin: 2% auto;
+  }
+
 }

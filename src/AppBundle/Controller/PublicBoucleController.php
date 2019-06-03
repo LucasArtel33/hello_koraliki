@@ -121,7 +121,8 @@ class PublicBoucleController extends Controller
                 [
                     'modal' => 'Login',
                     'template' => 'baseLog.html.twig',
-                    'products' => $products,
+                    'product' => $product,
+                    'moreProduct' => $moreProduct,
                 ]
             );
         }

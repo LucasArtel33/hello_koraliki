@@ -17,41 +17,65 @@ p {
   color: #086970;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  z-index: 99999;
-  width: 100%;
-}
-
-.link_logo_header {
-  width: 15%;
-}
-
-.brand_name {
-  font-family: "Dancing Script", cursive;
-  font-size: 150%;
-  padding: 2%;
-  color: #063442;
-}
-
 .logo_header {
   width: 70%;
-}
-
-.menu {
-  display: flex;
 }
 
 .item_header {
   font-family: "Cinzel", serif;
   color: #063442;
-  font-size: 120%;
-  padding: 10px;
 }
 
+@media screen and (min-width: 1280px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .item_header {
+    font-size: 120%;
+    padding: 10px;
+  }
+
+  .link_logo_header {
+    width: 15%;
+  }
+
+  .brand_name {
+    font-family: "Dancing Script", cursive;
+    font-size: 150%;
+    padding: 2%;
+    color: #063442;
+  }
+
+  .menu {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .link_logo_header {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  .logo_header {
+    display: block;
+    margin: auto;
+  }
+
+  .menu {
+    text-align: center;
+  }
+
+  .item_header {
+    margin: 2%;
+  }
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -87,54 +111,60 @@ p {
 }
 
 .index_txt {
-  width: 80%;
-  font-size: 125%;
-  margin-left: 5%;
-  position: absolute;
-  bottom: 20%;
+  font-family: "Cinzel", serif;
+}
+
+@media screen and (min-width: 1280px) {
+  .index_txt {
+    width: 80%;
+    font-size: 125%;
+    margin-left: 5%;
+    position: absolute;
+    bottom: 20%;
+    color: #063442;
+    background-color: rgba(219, 172, 160, 0.8);
+  }
+
+  .background_index {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .insta_title {
+    font-family: "Cinzel", serif;
+    color: #063442;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .insta_content {
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .background_index {
+    display: none;
+  }
+
+  .index_txt {
+    color: #086970;
+    text-align: center;
+    width: 80%;
+    margin: 5% auto;
+  }
+}
+.tri {
+  font-family: "Cinzel", serif;
   color: #063442;
-  font-family: "Cinzel", serif;
-}
-
-.button_collection {
-  position: absolute;
-  bottom: 10%;
-  border: 2px solid #063442;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #F0D2C3;
-  color: #086970;
-  font-size: 20px;
-  margin-left: 5%;
-  font-family: "Cinzel", serif;
-}
-
-.background_index {
-  background-color: #8D5858;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  border-bottom: 3px solid #063442;
-}
-
-.insta_title {
-  font-family: "Cinzel", serif;
-  color: #063442;
-  text-align: center;
-  font-size: x-large;
-}
-
-.insta_content {
-  width: 90%;
-  margin: 5%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.item {
-  width: 200px;
-  height: 200px;
-  background-color: grey;
 }
 
 .title_category {
@@ -146,53 +176,6 @@ p {
   font-size: x-large;
 }
 
-.txt_category {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  color: #086970;
-  font-family: "Cinzel", serif;
-  margin-bottom: 5%;
-}
-
-.img_category {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1%;
-}
-
-.all_product {
-  width: 85%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.product {
-  width: 25%;
-  margin-bottom: 5%;
-}
-
-.tree {
-  display: flex;
-}
-
-.tree_item {
-  color: #063442;
-  font-family: "Cinzel", serif;
-}
-
-.no_idea {
-  color: #086970;
-}
-
-.bracelet {
-  margin-left: 5px;
-}
-
 .info_category {
   width: 80%;
   display: flex;
@@ -202,24 +185,67 @@ p {
   font-family: "Cinzel", serif;
 }
 
-.bar {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2%;
-}
+@media screen and (min-width: 1280px) {
+  .img_category {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+  }
 
-.tri {
-  font-family: "Cinzel", serif;
-  color: #063442;
-}
+  .img_category:hover {
+    opacity: 0.6;
+  }
 
-footer {
-  clear: both;
-}
+  .all_product {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .product {
+    width: 25%;
+    margin-bottom: 5%;
+  }
+
+  .tree {
+    display: flex;
+  }
+
+  .tree_item {
+    color: #063442;
+    font-family: "Cinzel", serif;
+  }
+
+  .bar {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .img_category {
+    width: 80%;
+    display: block;
+    margin: 5% auto 2%;
+  }
+
+  .tree {
+    display: none;
+  }
+
+  .dropdown {
+    width: fit-content;
+    display: block;
+    margin: auto;
+  }
+}
 .title_newsletter {
   margin-top: 5%;
   margin-bottom: 3%;
@@ -250,63 +276,89 @@ footer {
   font-family: "Cinzel", serif;
 }
 
-.info {
-  display: flex;
-  background-color: #8D5858;
-  margin: 5% -9px;
-  padding: 1%;
-  font-family: "Cinzel", serif;
-}
+@media screen and (min-width: 1280px) {
+  footer {
+    clear: both;
+  }
 
-.paiement, .livraison, .handmade {
-  width: 20%;
-  text-align: center;
-  margin: 0 7%;
-  font-family: "Cinzel", serif;
-  color: #063442;
-}
+  .info {
+    display: flex;
+    background-color: #8D5858;
+    margin: 5% -9px;
+    padding: 1%;
+    font-family: "Cinzel", serif;
+  }
 
-.social {
-  display: flex;
-  justify-content: center;
-}
+  .paiement, .livraison, .handmade {
+    width: 20%;
+    text-align: center;
+    margin: 0 7%;
+    font-family: "Cinzel", serif;
+    color: #063442;
+  }
 
-.social_img {
-  width: 100%;
-  height: auto;
-}
+  .social {
+    display: flex;
+    justify-content: center;
+  }
 
-.facebook, .instagram {
-  width: 2%;
-  margin: 0 2%;
-}
+  .social_img {
+    width: 100%;
+    height: auto;
+  }
 
-.nav_foot {
-  display: flex;
-  justify-content: center;
-  margin-top: 1%;
-  font-family: "Cinzel", serif;
-}
+  .social_img:hover {
+    width: 120%;
+    height: auto;
+  }
 
-.nav_foot_item {
-  margin: 20px;
-}
+  .facebook, .instagram {
+    width: 2%;
+    margin: 0 2%;
+  }
 
-.tree_product {
-  display: flex;
-  margin-top: 10%;
-  margin-left: 5%;
-}
+  .nav_foot {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    font-family: "Cinzel", serif;
+  }
 
-.info_product {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
+  .nav_foot_item {
+    margin: 20px;
+  }
 }
+@media screen and (max-width: 1279px) {
+  .input_newsletter {
+    width: 60%;
+  }
 
+  .nav_foot {
+    display: none;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+  }
+
+  .facebook, .instagram {
+    width: 20%;
+  }
+
+  .social_img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    font-family: "Cinzel", serif;
+    color: #086970;
+    text-align: center;
+    margin: 5% 0;
+  }
+}
 .vert {
   color: green;
 }
@@ -315,35 +367,7 @@ footer {
   color: red;
 }
 
-.stock {
-  margin-bottom: 10%;
-}
-
-.txt_product {
-  font-family: "Cinzel", serif;
-  color: #063442;
-  width: 50%;
-}
-
-.img_product {
-  width: 35%;
-  height: 35%;
-}
-
-.price_name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.5em;
-  border-bottom: 1px solid #086970;
-}
-
-.detail {
-  font-family: "Cinzel", serif;
-  color: #086970;
-  margin-bottom: 20%;
-}
-
-.add_cart {
+.myBtn {
   border: 1px solid #086970;
   border-radius: 10px;
   padding: 2%;
@@ -357,6 +381,11 @@ footer {
   text-align: center;
 }
 
+.txt_product {
+  font-family: "Cinzel", serif;
+  color: #063442;
+}
+
 .more_title {
   font-family: "Cinzel", serif;
   font-size: x-large;
@@ -366,55 +395,129 @@ footer {
   margin-bottom: 5%;
 }
 
-.product_more {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+.name_more {
+  text-align: center;
 }
 
-.products_more {
-  width: 25%;
-}
+@media screen and (min-width: 1280px) {
+  .tree_product {
+    display: flex;
+    margin-top: 10%;
+    margin-left: 5%;
+  }
 
-.img_more {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1%;
-}
+  .info_product {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+  }
 
-.btn_img {
-  height: 10%;
-  margin-top: 17%;
-}
+  .stock {
+    margin-bottom: 10%;
+  }
 
+  .txt_product {
+    width: 50%;
+  }
+
+  .img_product {
+    width: 35%;
+    height: 35%;
+  }
+
+  .price_name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    border-bottom: 1px solid #086970;
+  }
+
+  .detail {
+    font-family: "Cinzel", serif;
+    color: #086970;
+    margin-bottom: 20%;
+  }
+
+  .myBtn:hover {
+    background-color: #8D5858;
+    color: #063442;
+    font-size: 1em;
+  }
+
+  .product_more {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .products_more {
+    width: 25%;
+  }
+
+  .img_more {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+  }
+
+  .img_more:hover {
+    opacity: 0.6;
+  }
+
+  .btn_img {
+    height: 10%;
+    margin-top: 17%;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .tree_product {
+    display: none;
+  }
+
+  .img_product {
+    width: 60%;
+    height: 60%;
+  }
+
+  .img_carrousel {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .price_name {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .stock {
+    text-align: center;
+  }
+
+  .detail {
+    width: 80%;
+    margin: 3% auto;
+    text-align: center;
+  }
+
+  .img_more {
+    width: 60%;
+    display: block;
+    margin: auto;
+  }
+}
 .title_univers {
   font-family: "Cinzel", serif;
   color: #063442;
   margin-top: 8%;
   text-align: center;
   font-size: 2em;
-}
-
-.brand {
-  display: flex;
-  margin: 5vw;
-  justify-content: space-between;
-}
-
-.img_brand {
-  width: 30vw;
-  height: 100%;
-  border: 1px solid #063442;
-}
-
-.brand_txt {
-  width: 50vw;
-  font-size: 1.3em;
-  color: #086970;
 }
 
 .title_conception {
@@ -424,33 +527,80 @@ footer {
   color: #063442;
 }
 
-.conception_block_img {
-  display: flex;
-  justify-content: space-between;
-  margin: 5% 10%;
-}
+@media screen and (min-width: 1280px) {
+  .brand {
+    display: flex;
+    margin: 5vw;
+    justify-content: space-around;
+  }
 
-.img_conception {
-  width: 90%;
-  border: 1px solid #063442;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .img_brand {
+    width: 30vw;
+    height: 100%;
+    border: 1px solid #063442;
+  }
 
-.conception_block_txt {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .brand_txt {
+    width: 30vw;
+    text-align: center;
+    font-size: 1.3em;
+    color: #086970;
+    margin-top: 10%;
+  }
 
-.text_conception {
-  margin: 0 5%;
-  font-size: 20px;
-  color: #086970;
-}
+  .conception_block_img {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 10%;
+  }
 
+  .img_conception {
+    width: 90%;
+    border: 1px solid #063442;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .conception_block_txt {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text_conception {
+    margin: 0 5%;
+    font-size: 20px;
+    color: #086970;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .brand {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .brand_txt, .text_conception {
+    color: #086970;
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .img_brand {
+    width: 60%;
+    display: block;
+    margin: 3% auto;
+  }
+
+  .img_conception {
+    width: 60%;
+    display: block;
+    margin: 3% auto;
+  }
+}
 .perso_title {
   font-family: "Cinzel", serif;
   color: #063442;
@@ -536,19 +686,9 @@ footer {
   margin-bottom: 1%;
 }
 
-.button_perso {
-  border: 1px solid #086970;
-  border-radius: 10px;
-  padding: 1%;
-  background-color: #F0D2C3;
-  color: #086970;
-  font-family: "Cinzel", serif;
-  font-size: 1em;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 20%;
-  text-align: center;
+.button_perso:hover {
+  background-color: #DBACA0;
+  font-size: 1.2em;
 }
 
 .title_reussi {
@@ -581,28 +721,44 @@ footer {
   font-size: 1.2em;
 }
 
+@media screen and (min-width: 1280px) {
+  .button_perso {
+    border: 1px solid #086970;
+    border-radius: 10px;
+    padding: 1%;
+    background-color: #F0D2C3;
+    color: #086970;
+    font-family: "Cinzel", serif;
+    font-size: 1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .button_perso {
+    border: 1px solid #086970;
+    border-radius: 10px;
+    padding: 1%;
+    background-color: #F0D2C3;
+    color: #086970;
+    font-family: "Cinzel", serif;
+    font-size: 1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 35%;
+    text-align: center;
+  }
+}
 .login_title {
   font-family: "Cinzel", serif;
   color: #063442;
   margin-top: 8%;
   text-align: center;
   font-size: 2em;
-}
-
-.login_form {
-  width: 30%;
-  margin: 2% auto;
-}
-
-.login_label {
-  font-family: "Cinzel", serif;
-  font-size: 1.2em;
-  color: #086970;
-}
-
-.login_input {
-  display: block;
-  margin: 1% auto;
 }
 
 .form_item {
@@ -621,6 +777,39 @@ footer {
   margin: 2% auto;
 }
 
+.login_input {
+  display: block;
+  margin: 1% auto;
+  font-family: "Cinzel", serif;
+  color: #086970;
+}
+
+.login_label {
+  font-family: "Cinzel", serif;
+  color: #086970;
+}
+
+@media screen and (min-width: 1280px) {
+  .login_form {
+    width: 30%;
+    margin: 2% auto;
+  }
+
+  .login_label {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .login_form {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+
+  .login_input {
+    font-size: 1em;
+  }
+}
 .register_form_item {
   font-family: "Cinzel", serif;
   color: #086970;
@@ -629,17 +818,25 @@ footer {
   margin: 1% 0;
 }
 
-.register_form {
-  width: 30%;
-  display: block;
-  margin: 2% auto;
-}
+@media screen and (min-width: 1280px) {
+  .register_form {
+    width: 30%;
+    display: block;
+    margin: 2% auto;
+  }
 
-.btn_register {
-  display: block;
-  margin: 5% auto;
+  .btn_register {
+    display: block;
+    margin: 5% auto;
+  }
 }
-
+@media screen and (max-width: 1279px) {
+  .register_form {
+    width: 80%;
+    display: block;
+    margin: 2% auto;
+  }
+}
 .empty {
   text-align: center;
   margin-top: 15%;
@@ -648,41 +845,51 @@ footer {
 
 .title_cart {
   font-family: "Cinzel", serif;
+  color: #063442;
   text-align: center;
   margin-top: 8%;
+  font-size: 2em;
 }
 
-.img_cart {
-  width: 10%;
-  height: 10%;
-}
+@media screen and (min-width: 1280px) {
+  .img_cart {
+    width: 10%;
+    height: 10%;
+  }
 
-.cart_product {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 2% auto;
-}
+  .cart_product {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2% auto;
+  }
 
-.delivery_cart {
-  text-align: center;
-}
+  .delivery_cart {
+    text-align: center;
+  }
 
-.total_cart {
-  margin: 2% auto;
-  text-align: right;
-  width: 80%;
-}
+  .total_cart {
+    margin: 2% auto;
+    text-align: right;
+    width: 80%;
+  }
 
-.btn_remove {
-  height: 100%;
-}
+  .btn_remove {
+    height: 100%;
+  }
 
-.btn_commande {
-  display: block;
-  margin: 3% auto 0;
+  .btn_commande {
+    display: block;
+    margin: 3% auto 0;
+  }
 }
-
+@media screen and (max-width: 1279px) {
+  .img_cart {
+    width: 60%;
+    display: block;
+    margin: auto;
+  }
+}
 .addCart_title {
   font-family: "Cinzel", serif;
   color: #063442;
@@ -754,93 +961,107 @@ footer {
   font-size: x-large;
 }
 
-.highlight_product {
-  margin: 5%;
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .img_highlight {
   width: 100%;
 }
 
-.img_index {
-  width: 25%;
-  height: 25%;
-}
+@media screen and (min-width: 1280px) {
+  .highlight_product {
+    margin: 5%;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.hovereffect {
-  width: 100%;
-  height: 100%;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-}
+  .img_index {
+    width: 25%;
+    height: 25%;
+  }
 
-.hovereffect .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background-color: rgba(240, 210, 195, 0.5);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
 
-.hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-}
+  .hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(240, 210, 195, 0.5);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
 
-.hovereffect h2 {
-  text-transform: uppercase;
-  color: #063442;
-  border-bottom: 1px solid #063442;
-  border-top: 1px solid #063442;
-  font-family: "Cinzel", serif;
-  font-weight: bolder;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  background: rgba(141, 88, 88, 0.9);
-  -webkit-transform: translatey(-100px);
-  -ms-transform: translatey(-100px);
-  transform: translatey(-100px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  margin: 45% 0 0;
-  padding: 10px;
-}
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
 
-.hovereffect:hover img {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
+  .hovereffect h2 {
+    text-transform: uppercase;
+    color: #063442;
+    border-bottom: 1px solid #063442;
+    border-top: 1px solid #063442;
+    font-family: "Cinzel", serif;
+    font-weight: bolder;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background: rgba(141, 88, 88, 0.9);
+    -webkit-transform: translatey(-100px);
+    -ms-transform: translatey(-100px);
+    transform: translatey(-100px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin: 45% 0 0;
+    padding: 10px;
+  }
 
-.hovereffect:hover .overlay {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
+  .hovereffect:hover img {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 
-.hovereffect:hover h2 {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -ms-transform: translatey(0);
-  -webkit-transform: translatey(0);
-  transform: translatey(0);
-}
+  .hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
 
+  .hovereffect:hover h2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-transform: translatey(0);
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+  }
+}
+@media screen and (max-width: 1279px) {
+  .img_index {
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin: 3% auto;
+  }
+
+  .overlay {
+    text-align: center;
+    font-family: "Cinzel", serif;
+  }
+}
 .info_title {
   font-family: "Cinzel", serif;
   color: #063442;
@@ -856,6 +1077,11 @@ footer {
   display: block;
   width: fit-content;
   margin: 3% auto;
+}
+
+.info_button:hover {
+  background-color: #F0D2C3;
+  border: 1px solid #063442;
 }
 
 .cmd {
@@ -885,12 +1111,29 @@ footer {
   margin-top: 8%;
 }
 
-.addAddress_form {
-  width: fit-content;
-  display: block;
-  margin: 3% auto;
+.row_address {
+  font-family: "Cinzel", serif;
+  color: #086970;
+  display: flex;
+  margin: 2%;
+  justify-content: space-between;
 }
 
+.submit_address {
+  display: block;
+  margin: 5% auto;
+  font-family: "Cinzel", serif;
+  color: #063442;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 1280px) {
+  .addAddress_form {
+    width: 40%;
+    display: block;
+    margin: 3% auto;
+  }
+}
 .address_title {
   font-family: "Cinzel", serif;
   color: #063442;

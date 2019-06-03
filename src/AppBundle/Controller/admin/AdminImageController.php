@@ -39,20 +39,27 @@ class AdminImageController extends Controller
         if($imageForm->isSubmitted() && $imageForm->isValid())
         {
             $image1 = $image->getImg1();
-            $image2 = $image->getImg2();
-            $image3 = $image->getImg3();
-
             $imageName1 = md5(uniqid()).'.'.$image1->guessExtension();
-            $imageName2 = md5(uniqid()).'.'.$image2->guessExtension();
-            $imageName3 = md5(uniqid()).'.'.$image3->guessExtension();
-
             $this->uploadImage($image1,$imageName1);
-            $this->uploadImage($image2,$imageName2);
-            $this->uploadImage($image3,$imageName3);
-
             $image->setImg1($imageName1);
-            $image->setImg2($imageName2);
-            $image->setImg3($imageName3);
+
+
+            $image2 = $image->getImg2();
+            if(!empty($image2))
+            {
+                $imageName2 = md5(uniqid()) . '.' . $image2->guessExtension();
+                $this->uploadImage($image2, $imageName2);
+                $image->setImg2($imageName2);
+            }
+
+
+            $image3 = $image->getImg3();
+            if(!empty($image3))
+            {
+                $imageName3 = md5(uniqid()) . '.' . $image3->guessExtension();
+                $this->uploadImage($image3, $imageName3);
+                $image->setImg3($imageName3);
+            }
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($image);

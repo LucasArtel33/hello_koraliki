@@ -15,6 +15,11 @@
   margin: 3% auto;
 }
 
+.info_button:hover{
+  background-color: $rose_clair;
+  border: 1px solid $bleu_fonce;
+}
+
 .cmd{
   display: flex;
   justify-content: space-between;

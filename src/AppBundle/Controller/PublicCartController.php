@@ -21,12 +21,9 @@ class PublicCartController extends Controller
     {
 //      je recupere l'utilisateur
         $user = $this->getUser();
-
 //      je recupere l'id de l'utilisateur
         $userId = $user->getId();
-
-//      Je recupere un array qui contient, si il en existe une, une commande lie a
-//      l'utilisateur au status 1 soit 'panier'
+//      Je recupere,si il en existe une, une commande lie a l'utilisateur au status 1 soit 'panier'
         $orderRepository = $this->getDoctrine()->getRepository(Orders::class);
         $order = $orderRepository->findProductByOrder($userId);
 //      si il n'y a pas de commande j'en initie une nouvelle
@@ -34,13 +31,14 @@ class PublicCartController extends Controller
         {
             $order = new Orders();
         }
-
-//      je recupere le produit cible avec l'id recup dans la wildcard
+//      je recupere le produit a ajouter au panier avec l'id recup dans la wildcard
         $productRepository = $this->getDoctrine()->getRepository(Product::class);
         $productOrder = $productRepository->find($idProduct);
 
+//      Je recupere la categorie du produit pour rediriger le client sur la page categorie apres l'ajout au panier
         $category = $productOrder->getCategory();
         $category = $category->getId();
+
         if($category == 1){
             $category = 'allBracelet';
         }
@@ -51,42 +49,49 @@ class PublicCartController extends Controller
             $category = 'allBoucle';
         }
 
-//        $productInOrder = $orderRepository->findProductByOrder($userId);
+//      je recupere les produits deja present dans la commande
         $products = $order->getProducts();
-
+        $productInOrder = [];
+//      pour chaque produit présent dans la commande je vérifie que le produit à ajouté n'est pas deja dans la commande
         foreach ($products as $produit)
         {
-            if($idProduct = $produit->getId()){
-                return $this->render('publicViews/inCart.html.twig',
-                    [
-                        'category' => $category,
-                    ]
-                );
-            }
+            $productInOrder[] = $produit->getId();
         }
 
-        $productOrder->addOrder($order);
+        if(!in_array($productOrder->getId(), $productInOrder))
+        {
+//          j'ajoute la commande a l'objet produit
+            $productOrder->addOrder($order);
+//          j'ajoute la commande a l'objet utilisateur
+            $user->addOrder($order);
+//          je recupere le status panier
+            $statusRepository = $this->getDoctrine()->getRepository(Status_orders::class);
+            $statusOrder = $statusRepository->find(1);
+//          j'ajoute a l'objet order le status, le produit et l'utilisateur
+            $order->setStatusOrder($statusOrder);
+            $order->addProduct($productOrder);
+            $order->setUser($user);
+//          j'instanci l'entityManager, persist les objet user, order et product puis je les stock en BDD
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->persist($order);
+            $entityManager->persist($productOrder);
+            $entityManager->flush();
 
-        $user->addOrder($order);
-
-        $statusRepository = $this->getDoctrine()->getRepository(Status_orders::class);
-        $statusOrder = $statusRepository->find(1);
-
-        $order->setStatusOrder($statusOrder);
-        $order->addProduct($productOrder);
-        $order->setUser($user);
-
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($user);
-        $entityManager->persist($order);
-        $entityManager->persist($productOrder);
-        $entityManager->flush();
-
-        return $this->render('publicViews/ajoutPanier.html.twig',
-            [
-                'category' => $category,
-            ]
-        );
+            return $this->render('publicViews/ajoutPanier.html.twig',
+                [
+                    'category' => $category,
+                ]
+            );
+        }
+        else
+        {
+            return $this->render('publicViews/inCart.html.twig',
+                [
+                    'category' => $category,
+                ]
+            );
+        }
     }
 
     /**

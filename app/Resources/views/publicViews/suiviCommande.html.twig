@@ -7,15 +7,15 @@
 {% block content %}
     <h1 class="info_title">Mes commandes</h1>
     <div class="cmd">
-        <p>Commande numéro :</p>
+        <p>Commande de numéro :</p>
         <p>Status :</p>
         <p>Addresse livraison :</p>
         <p>Date : </p>
     </div>
     {% for order in orders %}
         <div class="cmd">
-            <p>Commande {{ order.id }}</p>
-            <p>Status : {{ order.statusOrder.type }}</p>
+            <p>Commande n{{ order.id }}</p>
+            <p>{{ order.statusOrder.type }}</p>
             {% if order.address  %}
                 <p>{{ order.address.name }}</p>
             {% endif %}

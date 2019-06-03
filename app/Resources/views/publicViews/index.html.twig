@@ -12,42 +12,40 @@
 
 </head>
 <body>
-    <div class="background_index">
-        <header class="header" id="header">
-                <a class="link_logo_header" href="{{ path('home') }}">
-                    <img class="logo_header" id="logo" src="{{ asset('assets/img/logo.png') }}" alt="le logo">
-                    <h1 style="display: none;" class="brand_name" id="text">Hello Koraliki</h1>
-                </a>
-            <nav class="nav_header">
-                <ul class="menu">
-                    <div class="dropdown">
-                        <li class="item_header dropbtn">Ma Collection</li>
-                        <div class="dropdown-content">
-                            <a href="{{ path('allBracelet') }}">Bracelets</a>
-                            <a href="{{ path('allCollier') }}">Colliers</a>
-                            <a href="{{ path('allBoucle') }}">Boucles d'oreilles</a>
-                        </div>
+    <header class="header" id="header">
+            <a class="link_logo_header" href="{{ path('home') }}">
+                <img class="logo_header" id="logo" src="{{ asset('assets/img/logo.png') }}" alt="le logo">
+                <h1 style="display: none;" class="brand_name" id="text">Hello Koraliki</h1>
+            </a>
+        <nav class="nav_header">
+            <ul class="menu">
+                <div class="dropdown">
+                    <li class="item_header dropbtn">Ma Collection</li>
+                    <div class="dropdown-content">
+                        <a href="{{ path('allBracelet') }}">Bracelets</a>
+                        <a href="{{ path('allCollier') }}">Colliers</a>
+                        <a href="{{ path('allBoucle') }}">Boucles d'oreilles</a>
                     </div>
-                    <a href="{{ path('univers') }}">
-                        <li class="item_header">Mon Univers</li>
-                    </a>
-                    <a href="{{ path('personnalisation') }}">
-                        <li class="item_header">Personnalisation</li>
-                    </a>
-                    <a href="{{ path('fos_user_security_login') }}">
-                        <li class="item_header">Connexion</li>
-                    </a>
-                </ul>
-            </nav>
-        </header>
-        <article class="index_collection">
-            <p class="index_txt">Bonjour et bienvenue sur mon shop en ligne ! Ici, vous pourrez retrouver l’ensemble de mes créations qui
-                sont disponibles. Si vous avez la moindre "demande?" à me faire, n’hésitez pas à vous rendre sur  l’onglet
-                « Personnalisation ». En vous souhaitant une bonne visite !
-            </p>
-{#            <a class="button_collection" href="">La Collection</a>#}
-        </article>
-    </div>
+                </div>
+                <a href="{{ path('univers') }}">
+                    <li class="item_header">Mon Univers</li>
+                </a>
+                <a href="{{ path('personnalisation') }}">
+                    <li class="item_header">Personnalisation</li>
+                </a>
+                <a href="{{ path('fos_user_security_login') }}">
+                    <li class="item_header">Connexion</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <img class="background_index" src="{{ asset('assets/img/home2.jpeg') }}" alt="image de fond">
+    <article class="index_collection">
+        <p class="index_txt">Bonjour et bienvenue sur mon shop en ligne ! Ici, vous pourrez retrouver l’ensemble de mes créations qui
+            sont disponibles. Si vous avez la moindre "demande?" à me faire, n’hésitez pas à vous rendre sur  l’onglet
+            « Personnalisation ». En vous souhaitant une bonne visite !
+        </p>
+    </article>
 
     <section>
         <article>
@@ -56,7 +54,7 @@
                 {% for product in products %}
                     <div class="img_index">
                         <div class="hovereffect">
-                            <a href="">
+                            <a href="{{ path(product.category.type,{'id' : product.id}) }}">
                                 <img class="img_highlight" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
                             </a>
                             <div class="overlay">
@@ -69,17 +67,6 @@
                 {% endfor %}
             </div>
         </article>
-
-{#        <article class="carousel">#}
-{#            <h2 class="insta_title">Mon Instagram</h2>#}
-{#            <div class="insta_content">#}
-{#                <div class="item"><h4>1</h4></div>#}
-{#                <div class="item"><h4>2</h4></div>#}
-{#                <div class="item"><h4>3</h4></div>#}
-{#                <div class="item"><h4>4</h4></div>#}
-{#                <div class="item"><h4>5</h4></div>#}
-{#            </div>#}
-{#        </article>#}
 
     </section>
     <footer>
@@ -124,14 +111,15 @@
 
     </footer>
     <script>
-        // Quand l'utilisateur scroll de 50px alors, je change de logo et applique un background a ma navbar
         window.onscroll = function() {scrollFunction()};
-
         function scrollFunction() {
+        // lorsque l'utilisateur scroll vers le bas de 50px alors on cache le logo, on rend visible le texte et on modifie
+        //  la couleur de fond de notre header
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 document.getElementById("logo").style.display = "none";
                 document.getElementById("text").style.display = "block";
                 document.getElementById("header").style.backgroundColor = "rgba(219, 172, 160, 0.8)";
+        // A l'inverse au scroll vers le haut, on remet les éléments à leurs etat d'origine
             } else if (document.body.scrollTop <= 50 || document.documentElement.scrollTop <= 50) {
                 document.getElementById("logo").style.display = "block";
                 document.getElementById("text").style.display = "none";

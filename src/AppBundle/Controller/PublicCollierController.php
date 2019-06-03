@@ -117,13 +117,16 @@ class PublicCollierController extends Controller
         {
             return $this->render('publicViews/product.html.twig',
                 [
-                    'template' => 'baseLog.html.twig',
-                    'products' => $products,
+                    'modal' => 'Login',
+                    'template' => 'base.html.twig',
+                    'product' => $product,
+                    'moreProduct' => $moreProduct,
                 ]
             );
         }
         return $this->render('publicViews/product.html.twig',
             [
+                'modal' => 'Public',
                 'template' => 'base.html.twig',
                 'product' => $product,
                 'moreProduct' => $moreProduct,

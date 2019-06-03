@@ -17,13 +17,17 @@
         </a>
     </nav>
     <div class="info_product">
-
-        <button class="btn_img" onclick="plusDivs(-1)">&#10094;</button>
-        <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
-        <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img2) }}" alt="produit">
-        <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img3) }}" alt="produit">
-        <button class="btn_img" onclick="plusDivs(+1)">&#10095;</button>
-
+        <div class="img_carrousel">
+            <button class="btn_img" onclick="plusDivs(-1)">&#10094;</button>
+            <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+            {% if product.img.img2 %}
+                <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img2) }}" alt="produit">
+            {% endif %}
+            {% if product.img.img3 %}
+                <img class="img_product mySlides" src="{{ asset('assets/img/product/'~product.img.img3) }}" alt="produit">
+            {% endif %}
+            <button class="btn_img" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
         <div class="txt_product">
             <div class="price_name">
                 <p>{{ product.name }}</p>
@@ -48,7 +52,7 @@
                 </div>
             </div>
 
-            <button id="myBtn">Ajouter au panier</button>
+            <button id="myBtn" class="myBtn">Ajouter au panier</button>
         </div>
     </div>
     <div>
@@ -59,29 +63,13 @@
             <div class="products_more">
                 <a href="{{ path(product.category.type,{'id' : product.id}) }}">
                     <img class="img_more" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
+                    <p class="name_more">{{ product.name }}</p>
                 </a>
             </div>
         {% endfor %}
     </div>
-
-{#    <!-- The Modal -->#}
-{#    <div id="myModal" class="modal">#}
-
-{#        <!-- Modal content -->#}
-{#        <div class="modal-content">#}
-{#            <span class="close">&times;</span>#}
-{#            <p>Voulez-vous ajouter ce produit au panier?</p>#}
-{#            <div>#}
-{#                <button><a href="{{ path('addCart',{'idProduct' : product.id}) }}">Oui</a></button>#}
-{#                <button id="close">Non</button>#}
-{#            </div>#}
-{#        </div>#}
-
-{#    </div>#}
     {% include '_partiels/_modal'~modal~'.html.twig' %}
-
 {% endblock %}
-
 
 {% block newsletter %}
     {% include '_partiels/_newsletter.html.twig' %}

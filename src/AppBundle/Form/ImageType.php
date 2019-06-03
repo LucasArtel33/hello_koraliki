@@ -16,8 +16,8 @@ class ImageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('img1', FileType::class)
-                ->add('img2', FileType::class)
-                ->add('img3', FileType::class)
+                ->add('img2', FileType::class, ['required' => false])
+                ->add('img3', FileType::class, ['required' => false])
                 ->add('submit', SubmitType::class);
     }
 

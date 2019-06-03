@@ -1,58 +1,90 @@
-.title_univers{
+.title_univers {
   font-family: $font;
   color: $bleu_fonce;
-  margin-top:8%;
+  margin-top: 8%;
   text-align: center;
   font-size: 2em;
 }
 
-.brand {
-  display: flex;
-  margin: 5vw;
-  justify-content: space-between;
-}
-
-.img_brand {
-  width: 30vw;
-  height: 100%;
-  border: 1px solid $bleu_fonce;
-}
-
-.brand_txt {
-  width: 50vw;
-  font-size: 1.3em;
-  color: #086970;
-}
-
-.title_conception{
+.title_conception {
   text-align: center;
   font-size: 2em;
   font-family: 'Cinzel', serif;
   color: $bleu_fonce;
 }
 
-.conception_block_img {
-  display: flex;
-  justify-content: space-between;
-  margin:5% 10%;
-}
+@media screen and (min-width: 1280px) {
 
-.img_conception{
-  width: 90%;
-  border: 1px solid $bleu_fonce;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.conception_block_txt{
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .brand {
+    display: flex;
+    margin: 5vw;
+    justify-content: space-around;
+  }
 
-.text_conception {
-  margin:0 5%;
-  font-size: 20px;
-  color: $bleu_clair;
+  .img_brand {
+    width: 30vw;
+    height: 100%;
+    border: 1px solid $bleu_fonce;
+  }
+
+  .brand_txt {
+    width: 30vw;
+    text-align: center;
+    font-size: 1.3em;
+    color: #086970;
+    margin-top: 10%;
+  }
+
+  .conception_block_img {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 10%;
+  }
+
+  .img_conception {
+    width: 90%;
+    border: 1px solid $bleu_fonce;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .conception_block_txt {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text_conception {
+    margin: 0 5%;
+    font-size: 20px;
+    color: $bleu_clair;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .brand {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .brand_txt, .text_conception{
+    color: $bleu_clair;
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+  .img_brand{
+    width: 60%;
+    display: block;
+    margin: 3% auto;
+  }
+
+  .img_conception{
+    width: 60%;
+    display: block;
+    margin: 3% auto;
+  }
+
 }
