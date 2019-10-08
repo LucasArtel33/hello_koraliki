@@ -5,6 +5,7 @@
 {% block content %}
     <h1 class="text-center">Modifier le produit</h1>
     {{ form_start(productForm) }}
+    <div class="row">
         <div class="col">
             {{ form_label(productForm.name, 'Nom :') }}
             {{ form_errors(productForm.name) }}

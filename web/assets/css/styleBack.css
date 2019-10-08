@@ -87,4 +87,14 @@
   margin: 5% auto;
 }
 
+.center {
+  width: fit-content;
+  margin: auto;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
 /*# sourceMappingURL=styleBack.css.map */

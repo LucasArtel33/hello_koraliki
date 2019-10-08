@@ -1,0 +1,56 @@
+{% extends 'template/adminBase.html.twig' %}
+
+{% block title %} admin hello koraliki{% endblock %}
+
+{% block content %}
+    <h1 class="text-center title_img_add">Ajouter un produit</h1>
+    {{ form_start(productAddForm) }}
+    <p class="text-center">Formats d'image accepté .jpg , .jpeg, .png</p>
+    <div class="col">
+        {{ form_label(productAddForm.img1, 'Image 1') }}
+        {{ form_errors(productAddForm.img1) }}
+        {{ form_widget(productAddForm.img1, {'attr': {'class': 'form-group'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productAddForm.img2, 'Image 2') }}
+        {{ form_errors(productAddForm.img2) }}
+        {{ form_widget(productAddForm.img2, {'attr': {'class': 'form-group'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productAddForm.img3, 'Image 3') }}
+        {{ form_errors(productAddForm.img3) }}
+        {{ form_widget(productAddForm.img3, {'attr': {'class': 'form-group'}}) }}
+    </div>
+    {#------------ADD PRODUCT-----#}
+    <div class="col">
+        {{ form_label(productAddForm.name, 'Nom :') }}
+        {{ form_errors(productAddForm.name) }}
+        {{ form_widget(productAddForm.name, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productAddForm.stock, 'Stock :') }}
+        {{ form_errors(productAddForm.stock) }}
+        {{ form_widget(productAddForm.stock, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productAddForm.price, 'Prix :') }}
+        {{ form_errors(productAddForm.price) }}
+        {{ form_widget(productAddForm.price, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productAddForm.category, 'Categorie') }}
+        {{ form_errors(productAddForm.category) }}
+        {{ form_widget(productAddForm.category, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_label(productAddForm.description, 'Description :') }}
+        {{ form_errors(productAddForm.description) }}
+        {{ form_widget(productAddForm.description, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="col">
+        {{ form_widget(productAddForm.submit) }}
+    </div>
+    {{ form_end(productAddForm) }}
+
+
+{% endblock %}

@@ -9,17 +9,21 @@
     {% for product in products %}
         <div class="cart_product">
             <img class="img_cart" src="{{ asset('assets/img/product/'~product.img.img1) }}" alt="produit">
-            <p>{{  product.name }}</p>
-            {% if product.stock >= 1 %}
-                <p class="vert">En stock</p>
-            {% else %}
-                <p class="rouge">Hors Stock</p>
-            {% endif %}
-            <p>{{ product.price }} €</p>
-            <button class="btn_remove"><a href="{{ path('removeCart',{'id' : product.id}) }}">retirer du panier</a></button>
+            <div class="cart_info">
+                <p>{{  product.name }}</p>
+                {% if product.stock >= 1 %}
+                    <p class="vert">En stock</p>
+                {% else %}
+                    <p class="rouge">Hors Stock</p>
+                {% endif %}
+                <p>{{ product.price }} €</p>
+            </div>
+            <button class="btn_remove">
+                <a href="{{ path('removeCart',{'id' : product.id}) }}">retirer du panier</a>
+            </button>
         </div>
-
 {% endfor %}
+
     <p class="delivery_cart"> Frais de port fixe à 5€.</p>
     <p class="total_cart">Total: {{ total }} €</p>
 

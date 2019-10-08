@@ -36,6 +36,7 @@
   text-align: center;
 }
 
+
 @media screen and (min-width: 1280px) {
 
   .tree_product {
@@ -61,8 +62,15 @@
   }
 
   .img_product {
-    width: 35%;
-    height: 35%;
+    width: 80%;
+    height: 80%;
+  }
+
+  .img_carrousel{
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
   }
 
   .price_name {
@@ -108,7 +116,7 @@
 
   .btn_img {
     height: 10%;
-    margin-top: 17%;
+    margin-top: 40%;
   }
 }
 
