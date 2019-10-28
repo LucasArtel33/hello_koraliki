@@ -22,7 +22,7 @@ class Orders
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Status_orders")
+     * @ORM\ManyToOne(targetEntity="Status_orders", fetch="EAGER")
      */
     private $statusOrder;
 
@@ -33,11 +33,19 @@ class Orders
 
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="order")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Address", inversedBy="order")
+     * @var string
+     *
+     * @ORM\Column(name="cookie_id", type="string", nullable=true)
+     */
+    private $cookieId;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Address", inversedBy="order", fetch="EAGER")
      */
     private $address;
 
@@ -55,4 +63,144 @@ class Orders
         $this->user = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set dateCommande
+     *
+     * @param \DateTime $dateCommande
+     *
+     * @return Orders
+     */
+    public function setDateCommande($dateCommande)
+    {
+        $this->dateCommande = $dateCommande;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCommande
+     *
+     * @return \DateTime
+     */
+    public function getDateCommande()
+    {
+        return $this->dateCommande;
+    }
+
+    /**
+     * Set statusOrder
+     *
+     * @param \AppBundle\Entity\Status_orders $statusOrder
+     *
+     * @return Orders
+     */
+    public function setStatusOrder(\AppBundle\Entity\Status_orders $statusOrder = null)
+    {
+        $this->statusOrder = $statusOrder;
+
+        return $this;
+    }
+
+    /**
+     * Get statusOrder
+     *
+     * @return \AppBundle\Entity\Status_orders
+     */
+    public function getStatusOrder()
+    {
+        return $this->statusOrder;
+    }
+
+    /**
+     * Add product
+     *
+     * @param \AppBundle\Entity\Product $product
+     *
+     * @return Orders
+     */
+    public function addProduct(\AppBundle\Entity\Product $product)
+    {
+        $this->products[] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Remove product
+     *
+     * @param \AppBundle\Entity\Product $product
+     */
+    public function removeProduct(\AppBundle\Entity\Product $product)
+    {
+        $this->products->removeElement($product);
+    }
+
+    /**
+     * Get products
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Orders
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set address
+     *
+     * @param \AppBundle\Entity\Address $address
+     *
+     * @return Orders
+     */
+    public function setAddress(\AppBundle\Entity\Address $address = null)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return \AppBundle\Entity\Address
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
 }

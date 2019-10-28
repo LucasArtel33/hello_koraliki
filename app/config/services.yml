@@ -38,3 +38,14 @@ services:
         class: AppBundle\Form\RegistrationType
         tags:
             - { name: form.type, alias: app_user_registration }
+
+    login_listener:
+        class:  AppBundle\Listeners\LoginListener
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: onLogin }
+            - { name: kernel.event_listener, event: fos_user.registration.completed, method: onRegistration }
+
+    cookie_listener:
+        class: AppBundle\Listeners\CookieListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }

@@ -33,8 +33,16 @@ class Orders
 
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="order")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $user;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cookie_id", type="string", nullable=true)
+     */
+    private $cookieId;
 
     /**
      * @ORM\ManyToOne(targetEntity="Address", inversedBy="order", fetch="EAGER")
@@ -194,5 +202,29 @@ class Orders
     public function getAddress()
     {
         return $this->address;
+    }
+
+    /**
+     * Set cookieId
+     *
+     * @param string $cookieId
+     *
+     * @return Orders
+     */
+    public function setCookieId($cookieId)
+    {
+        $this->cookieId = $cookieId;
+
+        return $this;
+    }
+
+    /**
+     * Get cookieId
+     *
+     * @return string
+     */
+    public function getCookieId()
+    {
+        return $this->cookieId;
     }
 }

@@ -10,7 +10,7 @@ namespace AppBundle\Repository;
  */
 class OrdersRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findProductByOrder($userId)
+    public function findOrderByUser($userId)
     {
         $qb = $this->createQueryBuilder('o');
 
@@ -18,6 +18,23 @@ class OrdersRepository extends \Doctrine\ORM\EntityRepository
             ->where('o.statusOrder = 1')
             ->andWhere('o.user = :userId')
             ->setParameter('userId', $userId)
+            ->addSelect('product');
+
+        $query = $qb->getQuery();
+
+        $result = $query->getOneOrNullResult();
+
+        return $result;
+    }
+
+    public function findOrderByCookie($cookie)
+    {
+        $qb = $this->createQueryBuilder('o');
+
+        $qb->leftJoin('o.products','product')
+            ->where('o.statusOrder = 1')
+            ->andWhere('o.cookieId = :cookieId')
+            ->setParameter('cookieId', $cookie)
             ->addSelect('product');
 
         $query = $qb->getQuery();

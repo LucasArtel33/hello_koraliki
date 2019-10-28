@@ -68,7 +68,16 @@
             </div>
         {% endfor %}
     </div>
-    {% include '_partiels/_modal'~modal~'.html.twig' %}
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Voulez-vous ajouter ce produit au panier?</p>
+            <div>
+                <button><a href="{{ path('addCart',{'idProduct' : product.id}) }}">Oui</a></button>
+                <button id="close">Non</button>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block newsletter %}

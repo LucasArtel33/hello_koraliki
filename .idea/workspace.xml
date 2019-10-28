@@ -2,110 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab345c1-9af2-4bfe-b21e-432082ee6b75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/adminViews/adminAddProduct.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Form/AddProductType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartTestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Listeners/CookieListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Listeners/LoginListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/_partiels/_modalPublic.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/_partiels/_modalPublic.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/adminViews/adminImage.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/adminViews/adminUpdateProduct.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/adminViews/adminUpdateProduct.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/_partiels/_modalLogin.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/_partiels/_modalPublic.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/emptyCart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/emptyCart.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/personnalisation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/personnalisation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/template/adminBase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/template/adminBase.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminGestionProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminGestionProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/admin/adminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/admin/adminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/styleBack.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/styleBack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/css/styleBack.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/styleBack.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/03990f212c9b8b74925a402b6c895cd5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/0787a6583af89334cacfabcf2013cfeb.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/09323dc3df46831771263942443f83db.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/0d363cb04a366b965f205e648ab15d0f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/10df866511d34cc67f3fb7e74cabb05f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/10e03012cc8a98c58539713af252e05f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/17aa7f12e42e5ed1e2619d2e4f73d3d1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/1dfab27987e07f8b194a63146003f314.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/1dff0e021c43cf264442d88a2581b86b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/1ff33b676701486a4a89c9a9fdb0a8ba.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/202ca7eb9b13509ae271e600783b1bb2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/23250d82387998f1c6180c664bf46c12.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/24d95940d714393b0d66b33cb14c66c9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/2d138d0624f52fad7e1a092c8716a332.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/2de62a69ec799767af5cff067877c6f5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/395a5ab8ad60f516de66b81b7e152c77.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/399f207499282e468212723424877614.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/3a19c623b045d596d701b15d3045ee50.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/3a24d9507757e19aabe10b8e1d4c73ec.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/3d22dbcde58d0372ad6d05e463521d50.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/3f6d93da2b21417e840142cde1bcbc5b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/3fff3f7731be0995c97e8eae3275c30f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/46b7019d3a704f6b27408e0fdd3792fe.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/4a1b1cfe0193e9c4f989a09f44b213e8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/4b323bb8b13c0f883626686467811249.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/4b459fa06f2292f411b9e2ee2e0ad41a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/554919c18bb06e632c59133e8835548d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/55e04af569fd4ae465d793908f742f08.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/560cf33025fd08cb366479c8f990b9ba.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/59c7ff4b33b525ca7dcdfbe6a231021f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/5a48ae4970e99eef65083a395468cdd5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/5db17329a112ca74e41a1b349d415990.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/5e1b0cea967e32b253ef1f4a05b108b5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/650e0cb0a0aefe9aed289cdfc156f3f3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/68e99bfd166ef566bb1c61f99ee42d63.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/6fccb155c44d4f62124a1ebb21780550.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/717016266fb247f351db1b95dbc881f8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/768988ba8bae22c76f63d7a2692be716.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/7fd5f065ad881ea2613adf30dc11b3c7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/84a41763b92b01c81a3b270ccd272d8b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/8910ba087afd723006dfc03286ff077d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/8e58d4b47aa83b632620e4fde152a4f6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/9031f8c9b090e6907289aabff5334bd2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/918c36b6f2026d0c9e5ed741100fdaa6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/93b075c3a02351429d14cde88843db4b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/96923b16e9580977a4d0445950843bd8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/972066f33c7b14e04bcc0b59392e0bf8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/9c8723de13a6903e503c06a23465b440.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/a23007c5c93786092dc72d1eb104169d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/ac66315997f623da70bb588c3a59cf43.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/aca33202b9afba3a4ec7af0dcf3d7cef.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/ae74d3ec2f4916fc4d2b2f5c5aa44326.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/b230038754155b3bf9358ab0e50f3584.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/b31fad87f4544850a1034c83da4d5467.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/b69e6ec7ed32e0ac23ff2614869bae32.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/bcaced8884ed8268d9cbb94fd2a77551.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/bef05ea7ef7130c538a539bf1c64e8c1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/c0692a0eddb2fb5a00d96b8cf7d4a425.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/c1238b499b39340e395024aceff73b6d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/c1ed9a41f2c2a7b56b129ed925a8346e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/c75b27d6f29ec1a9cead82927bd5038c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/cfc1d622958fb8728b09c5492a6c3bca.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/d0a7caa1feb120683e82e0153c37cbc8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/d1be636bae0ee7cc0823dcf74d41e327.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/d609e33a098962840d268bb67e940d49.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/d635c03b133d11a8340962619c09ecb2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/daa09155ec6fd329fd6ce570301ec54e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/dac7a19a6faae179b00220cc86d6d7cc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/dbb07a41a92de976817d61766091b47c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/de9c311d8d1412c03b1fc990f52cbf2d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/e0341d61278e049f349565a1860f0791.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/e67166bd9e7ec8085aa03e09cd4361e1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/ed4491ab76508f45cf11f92fc6303d81.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/ef49c6269390bb4811fbd13648baec4a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/f36d6aba0c88fed100a02b95832bd9a8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/f53330d665e4a390a4260e41e018e1a4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/f855fe68197641ec86cf7955a9554088.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/f88b7622194d81aa29a824d10a1c86e7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/fb2aa2893296542a75ca57d74775d835.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/fdd3dd56089b3b0fe66bf2e7efffe017.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/img/product/ff46bcbf91aae57eed2cd71ae2d0536a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/_panier.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_panier.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/_product.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_product.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/sass/admin/styleBack.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/admin/styleBack.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +146,10 @@
       <workItem from="1570190797019" duration="8326000" />
       <workItem from="1570264452351" duration="894000" />
       <workItem from="1570448830223" duration="2330000" />
-      <workItem from="1570522534555" duration="2390000" />
+      <workItem from="1570522534555" duration="3997000" />
+      <workItem from="1570636830393" duration="3628000" />
+      <workItem from="1570782379583" duration="16745000" />
+      <workItem from="1571654225980" duration="1911000" />
     </task>
     <servers />
   </component>

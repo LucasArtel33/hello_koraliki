@@ -63,16 +63,16 @@ class AdminProductController extends Controller
                     ]
                 );
             }
-            if (filesize($result['img1']) > 2000000 )
-            {
-                $error1 = 'L\'image est trop volumineuse';
-                return $this->render('adminViews/adminAddProduct.html.twig',
-                    [
-                        'productAddForm' => $addProductFormView,
-                        'error1' => $error1
-                    ]
-                );
-            }
+//            if (filesize($result['img1']) > 2000000 )
+//            {
+//                $error1 = 'L\'image est trop volumineuse';
+//                return $this->render('adminViews/adminAddProduct.html.twig',
+//                    [
+//                        'productAddForm' => $addProductFormView,
+//                        'error1' => $error1
+//                    ]
+//                );
+//            }
 
             $this->uploadImage($result, 1,$image);
             if (!empty($result['img2'])){
