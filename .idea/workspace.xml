@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab345c1-9af2-4bfe-b21e-432082ee6b75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartTestController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Listeners/CookieListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Listeners/LoginListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/login.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hello_koraliki_v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hello_koraliki_v2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/_partiels/_modalLogin.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/_partiels/_modalPublic.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/ajoutPanier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/emptyCart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/emptyCart.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/inCart.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/product.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/admin/AdminProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config_prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,14 +65,29 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
     </include_path>
   </component>
   <component name="ProjectId" id="1OrxjQKek8otJO9tEFBIJzWZYfL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AppBundle/Form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -94,15 +97,15 @@
       <recent name="$PROJECT_DIR$/src/AppBundle/Form" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -149,7 +152,10 @@
       <workItem from="1570522534555" duration="3997000" />
       <workItem from="1570636830393" duration="3628000" />
       <workItem from="1570782379583" duration="16745000" />
-      <workItem from="1571654225980" duration="1911000" />
+      <workItem from="1571654225980" duration="2188000" />
+      <workItem from="1572449338563" duration="339000" />
+      <workItem from="1576076982478" duration="655000" />
+      <workItem from="1581718341792" duration="282000" />
     </task>
     <servers />
   </component>
@@ -168,6 +174,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1207" y="70" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581718611183">
+      <screen x="-1920" y="-280" width="1920" height="1080" />
+    </state>
+    <state x="-1207" y="70" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800/-1920.-280.1920.1080@-1920.-280.1920.1080" timestamp="1581718611183" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
