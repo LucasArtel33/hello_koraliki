@@ -8,6 +8,7 @@ use AppBundle\Entity\Address;
 use AppBundle\Entity\Orders;
 use AppBundle\Entity\Status_orders;
 use AppBundle\Form\AddressOrderType;
+use AppBundle\Repository\OrdersRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,16 +17,23 @@ use Symfony\Component\Routing\Annotation\Route;
 class PublicOrderController extends Controller
 {
     /**
+     * @Route("/login/commande", name="loginCommande")
+     */
+    public function loginCommandeAction()
+    {
+        return $this->render('publicViews/panierLogin.html.twig');
+    }
+
+    /**
      * @Route("/commande", name="commande")
      */
     public function commandeAction(Request $request)
     {
         $user = $this->getUser();
         $userId = $user->getId();
-//      je recupere les adresse deja saisie par l'utilisateur
         $addressRepository = $this->getDoctrine()->getRepository(Address::class);
         $allAddress = $addressRepository->findBy(['user' => $user]);
-
+//      je recupere les adresse deja saisie par l'utilisateur
         if ($request->isMethod('POST'))
         {
                 $request->request->get($request->query->get('address'));

@@ -1,0 +1,18 @@
+{% extends 'template/base.html.twig' %}
+
+{% block title %}
+    Les Bracelets
+{% endblock %}
+
+{% block content %}
+    <h1 class="addCart_title">Vous devez vous inscrire ou vous connecter afin de passer commande</h1>
+
+    <div class="btn_addCart">
+        <button>
+            <a href="{{ path('fos_user_registration_register') }}">S'inscrire</a>
+        </button>
+        <button>
+            <a href="{{ path('fos_user_security_login') }}">Se connecter</a>
+        </button>
+    </div>
+{% endblock %}

@@ -12,40 +12,44 @@
 
 </head>
 <body>
-    <header class="header" id="header">
-            <a class="link_logo_header" href="{{ path('home') }}">
-                <img class="logo_header" id="logo" src="{{ asset('assets/img/logo.png') }}" alt="le logo">
-                <h1 style="display: none;" class="brand_name" id="text">Hello Koraliki</h1>
-            </a>
-        <nav class="nav_header">
-            <ul class="menu">
-                <div class="dropdown">
-                    <li class="item_header dropbtn">Ma Collection</li>
-                    <div class="dropdown-content">
-                        <a href="{{ path('allBracelet') }}">Bracelets</a>
-                        <a href="{{ path('allCollier') }}">Colliers</a>
-                        <a href="{{ path('allBoucle') }}">Boucles d'oreilles</a>
+    <div class="background_index">
+        <header class="header" id="header">
+                <a class="link_logo_header" href="{{ path('home') }}">
+                    <img class="logo_header" id="logo" src="{{ asset('assets/img/logo.png') }}" alt="le logo">
+                    <h1 style="display: none;" class="brand_name" id="text">Hello Koraliki</h1>
+                </a>
+            <nav class="nav_header">
+                <ul class="menu">
+                    <div class="dropdown">
+                        <li class="item_header dropbtn">Ma Collection</li>
+                        <div class="dropdown-content">
+                            <a href="{{ path('allBracelet') }}">Bracelets</a>
+                            <a href="{{ path('allCollier') }}">Colliers</a>
+                            <a href="{{ path('allBoucle') }}">Boucles d'oreilles</a>
+                        </div>
                     </div>
-                </div>
-                <a href="{{ path('univers') }}">
-                    <li class="item_header">Mon Univers</li>
-                </a>
-                <a href="{{ path('personnalisation') }}">
-                    <li class="item_header">Personnalisation</li>
-                </a>
-                <a href="{{ path('fos_user_security_login') }}">
-                    <li class="item_header">Connexion</li>
-                </a>
-            </ul>
-        </nav>
-    </header>
-    <img class="background_index" src="{{ asset('assets/img/home2.jpeg') }}" alt="image de fond">
-    <article class="index_collection">
-        <p class="index_txt">Bonjour et bienvenue sur mon shop en ligne ! Ici, vous pourrez retrouver l’ensemble de mes créations qui
-            sont disponibles. Si vous avez la moindre "demande?" à me faire, n’hésitez pas à vous rendre sur  l’onglet
-            « Personnalisation ». En vous souhaitant une bonne visite !
-        </p>
-    </article>
+                    <a href="{{ path('univers') }}">
+                        <li class="item_header">Mon Univers</li>
+                    </a>
+                    <a href="{{ path('personnalisation') }}">
+                        <li class="item_header">Personnalisation</li>
+                    </a>
+                    <a href="{{ path('panier') }}">
+                        <li class="item_header">Panier</li>
+                    </a>
+                    <a href="{{ path('fos_user_security_login') }}">
+                        <li class="item_header">Connexion</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <article class="index_collection">
+            <p class="index_txt">Bonjour et bienvenue sur mon shop en ligne ! Ici, vous pourrez retrouver l’ensemble de mes créations qui
+                sont disponibles. Si vous avez la moindre "demande?" à me faire, n’hésitez pas à vous rendre sur  l’onglet
+                « Personnalisation ». En vous souhaitant une bonne visite !
+            </p>
+        </article>
+    </div>
 
     <section>
         <article>

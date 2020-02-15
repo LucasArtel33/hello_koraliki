@@ -28,7 +28,7 @@
     <p class="total_cart">Total: {{ total }} €</p>
 
     <button class="btn_commande">
-        <a href="{{ path('commande') }}"> COMMANDER </a>
+        <a href="{{ path(login==1 ? 'loginCommande' : 'commande' ) }}"> COMMANDER </a>
     </button>
 
 {% endblock %}

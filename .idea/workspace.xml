@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ab345c1-9af2-4bfe-b21e-432082ee6b75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hello_koraliki_v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hello_koraliki_v2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/panierLogin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config_prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/indexLogin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/indexLogin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/publicViews/publicPanier.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/template/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/template/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartTestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicCartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PublicOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PublicOrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Listeners/LoginListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Listeners/LoginListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/OrdersRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/sass/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/sass/_index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +162,7 @@
       <workItem from="1571654225980" duration="2188000" />
       <workItem from="1572449338563" duration="339000" />
       <workItem from="1576076982478" duration="655000" />
-      <workItem from="1581718341792" duration="282000" />
+      <workItem from="1581718341792" duration="4835000" />
     </task>
     <servers />
   </component>
@@ -180,6 +187,10 @@
       <screen x="-1920" y="-280" width="1920" height="1080" />
     </state>
     <state x="-1207" y="70" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800/-1920.-280.1920.1080@-1920.-280.1920.1080" timestamp="1581718611183" />
+    <state x="-1422" y="-280" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581720892512">
+      <screen x="-1920" y="-280" width="1920" height="1080" />
+    </state>
+    <state x="-1422" y="-280" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800/-1920.-280.1920.1080@-1920.-280.1920.1080" timestamp="1581720892512" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -188,6 +199,11 @@
           <url>file://$PROJECT_DIR$/src/AppBundle/Controller/PublicBraceletController.php</url>
           <line>5</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/AppBundle/Controller/PublicOrderController.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

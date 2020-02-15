@@ -4,9 +4,11 @@
 namespace AppBundle\Listeners;
 
 use AppBundle\Entity\Orders;
-//use FOS\UserBundle\Model\UserManagerInterface;
+use FOS\UserBundle\Model\UserManagerInterface;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;
+use FOS\UserBundle\Event\FilterUserResponseEvent;
+
 
 class LoginListener
 {
